@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import InfoSection from './components/InfoSection';
@@ -10,11 +10,29 @@ import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import SponsorsSection from './components/SponsorsSection';
 import ContactSection from './components/ContactSection';
-import TermsOfServiceSection from './components/TermsOfServiceSection';
-import PrivacyPolicySection from './components/PrivacyPolicySection';
+import TermsOfServicePage from './components/TermsOfServiceSection';
+import PrivacyPolicyPage from './components/PrivacyPolicySection';
 import { ABOUT_COLLEGE, ABOUT_ORSI } from './constants';
 
 export function App() {
+  const [currentPage, setCurrentPage] = useState<'home' | 'terms' | 'privacy'>('home');
+
+  const handleNavigate = (page: 'terms' | 'privacy') => {
+    setCurrentPage(page);
+  };
+
+  const handleBackToHome = () => {
+    setCurrentPage('home');
+  };
+
+  if (currentPage === 'terms') {
+    return <TermsOfServicePage onClose={handleBackToHome} />;
+  }
+
+  if (currentPage === 'privacy') {
+    return <PrivacyPolicyPage onClose={handleBackToHome} />;
+  }
+
   return (
     <div className="min-h-screen bg-surface">
       <Navbar />
@@ -78,12 +96,8 @@ export function App() {
         </section>
 
         <ContactSection />
-
-        <TermsOfServiceSection />
-
-        <PrivacyPolicySection />
       </main>
-      <Footer />
+      <Footer onNavigate={handleNavigate} />
       <ScrollToTop />
     </div>
   );

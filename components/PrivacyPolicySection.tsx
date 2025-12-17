@@ -1,23 +1,50 @@
 import React from 'react';
 import { CONFERENCE_DETAILS } from '../constants';
 
-const PrivacyPolicySection: React.FC = () => {
+interface PrivacyPolicyPageProps {
+  onClose: () => void;
+}
+
+const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onClose }) => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <section id="privacy-policy" className="py-16 lg:py-24 bg-slate-50">
-      <div className="container mx-auto px-4 max-w-5xl">
-        <div className="text-center mb-12">
-          <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-slate-200 border border-slate-300 text-slate-700 font-semibold text-xs tracking-wider uppercase">
-            Legal
+    <div className="min-h-screen bg-slate-50">
+      {/* Header */}
+      <div className="bg-govt-navy text-white sticky top-0 z-50 shadow-xl">
+        <div className="container mx-auto px-4 py-6 flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <button
+              onClick={onClose}
+              className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors group"
+            >
+              <svg className="w-6 h-6 transform group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+              </svg>
+              <span className="font-medium">Back to Conference</span>
+            </button>
           </div>
-          <h2 className="text-3xl md:text-5xl font-serif font-bold text-govt-navy mb-4">
+          <div className="text-sm text-slate-400">ICAORFDI-2026</div>
+        </div>
+      </div>
+
+      {/* Content */}
+      <div className="container mx-auto px-4 py-12 lg:py-16 max-w-4xl">
+        <div className="text-center mb-12">
+          <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-govt-blue/10 border border-govt-blue/20 text-govt-blue font-semibold text-xs tracking-wider uppercase">
+            Legal Document
+          </div>
+          <h1 className="text-4xl md:text-6xl font-serif font-bold text-govt-navy mb-4">
             Privacy Policy
-          </h2>
+          </h1>
           <p className="text-slate-600 text-lg">
             Effective Date: December 17, 2025
           </p>
         </div>
 
-        <div className="prose prose-slate max-w-none bg-white rounded-2xl shadow-lg p-8 md:p-12">
+        <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 lg:p-16 border border-slate-200">
           
           <h3 className="text-2xl font-bold text-govt-navy mt-8 first:mt-0">1. Introduction</h3>
           <p>This Privacy Policy describes how the ICAORFDI-2026 Conference Portal ("we," "us," or "our") collects, uses, and protects information from users ("you" or "your") of our website. This policy applies to the conference website operated by the Operational Research Society of India (ORSI) Indore Chapter and Government Holkar Science College, Indore.</p>
@@ -212,9 +239,22 @@ const PrivacyPolicySection: React.FC = () => {
             <p className="mt-2">By using this website and registering for the conference, you acknowledge that you have read, understood, and agree to this Privacy Policy and consent to the collection, use, and sharing of your information as described herein.</p>
           </div>
         </div>
+
+        {/* Footer */}
+        <div className="mt-12 text-center">
+          <button
+            onClick={onClose}
+            className="inline-flex items-center gap-2 px-8 py-4 bg-govt-blue text-white rounded-full font-semibold hover:bg-govt-accent transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            Return to Conference Portal
+          </button>
+        </div>
       </div>
-    </section>
+    </div>
   );
 };
 
-export default PrivacyPolicySection;
+export default PrivacyPolicyPage;

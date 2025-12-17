@@ -2,7 +2,11 @@ import React from 'react';
 import { CONFERENCE_DETAILS } from '../constants';
 import { MapPinIcon, ExternalLinkIcon } from './Icons';
 
-const Footer: React.FC = () => {
+interface FooterProps {
+  onNavigate?: (page: 'terms' | 'privacy') => void;
+}
+
+const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   return (
     <footer className="bg-govt-navy text-slate-300 relative">
       {/* Decorative Top Border */}
@@ -74,8 +78,18 @@ const Footer: React.FC = () => {
         <div className="border-t border-slate-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
             <p>© 2026 Govt. Holkar Science College. All rights reserved.</p>
             <div className="flex gap-6 mt-4 md:mt-0">
-                <a href="#privacy-policy" className="hover:text-white transition-colors">Privacy Policy</a>
-                <a href="#terms-of-service" className="hover:text-white transition-colors">Terms of Service</a>
+                <button 
+                  onClick={() => onNavigate?.('privacy')} 
+                  className="hover:text-white transition-colors cursor-pointer"
+                >
+                  Privacy Policy
+                </button>
+                <button 
+                  onClick={() => onNavigate?.('terms')} 
+                  className="hover:text-white transition-colors cursor-pointer"
+                >
+                  Terms of Service
+                </button>
             </div>
         </div>
       </div>
