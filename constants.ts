@@ -7,7 +7,7 @@ export const CONFERENCE_DETAILS = {
   host: "Government Holkar Science College, Indore",
   venue: "Govt. Holkar Science College, Indore, Madhya Pradesh",
   date: "06-08 March 2026",
-  website: "www.orsi.in",
+  website: "https://orsi-2026.com",
   email: "icaorfdi2026@gmail.com"
 };
 

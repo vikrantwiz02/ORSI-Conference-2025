@@ -26,7 +26,7 @@ export function App() {
   };
 
   if (currentPage === 'terms') {
-    return <TermsOfServicePage onClose={handleBackToHome} />;
+    return <TermsOfServicePage onClose={handleBackToHome} onPrivacyClick={() => handleNavigate('privacy')} />;
   }
 
   if (currentPage === 'privacy') {

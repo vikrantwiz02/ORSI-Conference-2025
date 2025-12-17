@@ -234,7 +234,7 @@ For any questions, concerns, or requests regarding this Privacy Policy or your p
 **ICAORFDI-2026 Conference Committee**  
 Government Holkar Science College, Indore, Madhya Pradesh  
 Email: icaorfdi2026@gmail.com  
-Website: www.orsi.in
+Website: [https.orsi-2026.com](https://orsi-2026.com)
 
 ---
 
