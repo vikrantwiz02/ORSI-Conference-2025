@@ -37,7 +37,7 @@ const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onClose }) => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-govt-accent opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-govt-accent"></span>
             </span>
-            <span className="text-sm font-bold text-slate-400">ICAORFDI-2026</span>
+            <span className="text-sm font-bold text-slate-400">{CONFERENCE_DETAILS.acronym}</span>
           </div>
         </div>
       </div>
@@ -73,7 +73,7 @@ const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onClose }) => {
               <span className="flex items-center justify-center w-8 h-8 rounded-full bg-govt-accent/10 text-govt-accent text-sm font-bold">1</span>
               Introduction
             </h3>
-            <p className="text-slate-600 leading-relaxed">This Privacy Policy describes how the ICAORFDI-2026 Conference Portal ("we," "us," or "our") collects, uses, and protects information from users ("you" or "your") of our website. This policy applies to the conference website operated by the Operational Research Society of India (ORSI) Indore Chapter and Government Holkar Science College, Indore.</p>
+            <p className="text-slate-600 leading-relaxed">This Privacy Policy describes how the {CONFERENCE_DETAILS.acronym} Conference Portal ("we," "us," or "our") collects, uses, and protects information from users ("you" or "your") of our website. This policy applies to the conference website operated by the {CONFERENCE_DETAILS.organizer} and {CONFERENCE_DETAILS.host}.</p>
             <p className="text-slate-600 leading-relaxed">We are committed to protecting your privacy and ensuring the security of your personal information in accordance with applicable Indian data protection laws.</p>
 
             <h3 className="text-2xl sm:text-3xl font-bold text-govt-navy mt-10 flex items-center gap-3">
@@ -85,7 +85,7 @@ const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onClose }) => {
           <p>We collect information that you voluntarily provide when you:</p>
           
           <p className="font-semibold mt-4">Register for the conference:</p>
-          <ul>
+          <ul className="list-disc pl-5 space-y-2 text-slate-600">
             <li>Full name</li>
             <li>Email address</li>
             <li>Phone number</li>
@@ -96,7 +96,7 @@ const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onClose }) => {
           </ul>
 
           <p className="font-semibold mt-4">Submit abstracts or papers:</p>
-          <ul>
+          <ul className="list-disc pl-5 space-y-2 text-slate-600">
             <li>Author names and contact details</li>
             <li>Co-author information</li>
             <li>Research content and materials</li>
@@ -104,14 +104,14 @@ const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onClose }) => {
           </ul>
 
           <p className="font-semibold mt-4">Make payments:</p>
-          <ul>
+          <ul className="list-disc pl-5 space-y-2 text-slate-600">
             <li>Bank transaction details (transaction ID, date, amount)</li>
             <li>Payment receipts</li>
           </ul>
 
           <h4 className="text-xl font-semibold text-govt-navy mt-6">2.2 Information Collected Automatically</h4>
           <p>When you visit our website, we may automatically collect:</p>
-          <ul>
+          <ul className="list-disc pl-5 space-y-2 text-slate-600">
             <li>IP address</li>
             <li>Browser type and version</li>
             <li>Operating system</li>
@@ -123,7 +123,7 @@ const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onClose }) => {
           <h3 className="text-2xl font-bold text-govt-navy mt-8">3. How We Use Your Information</h3>
           
           <h4 className="text-xl font-semibold text-govt-navy mt-6">3.1 Conference Operations</h4>
-          <ul>
+          <ul className="list-disc pl-5 space-y-2 text-slate-600">
             <li>Process and confirm conference registrations</li>
             <li>Manage abstract and paper submissions</li>
             <li>Communicate conference updates and schedules</li>
@@ -132,7 +132,7 @@ const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onClose }) => {
           </ul>
 
           <h4 className="text-xl font-semibold text-govt-navy mt-6">3.2 Academic Publication</h4>
-          <ul>
+          <ul className="list-disc pl-5 space-y-2 text-slate-600">
             <li>Review submitted abstracts and papers</li>
             <li>Prepare conference proceedings</li>
             <li>Submit selected papers to journals for publication</li>
@@ -140,7 +140,7 @@ const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onClose }) => {
           </ul>
 
           <h4 className="text-xl font-semibold text-govt-navy mt-6">3.3 Communication</h4>
-          <ul>
+          <ul className="list-disc pl-5 space-y-2 text-slate-600">
             <li>Send registration confirmations</li>
             <li>Provide conference updates and important announcements</li>
             <li>Respond to inquiries and support requests</li>
@@ -148,8 +148,8 @@ const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onClose }) => {
           </ul>
 
           <h3 className="text-2xl font-bold text-govt-navy mt-8">4. Legal Basis for Processing</h3>
-          <p>We process your personal information based on:</p>
-          <ul>
+          <p className="mb-2">We process your personal information based on:</p>
+          <ul className="list-disc pl-5 space-y-2 text-slate-600">
             <li><strong>Consent:</strong> You have given explicit consent for specific purposes</li>
             <li><strong>Contractual necessity:</strong> Processing is necessary to fulfill our agreement with you (conference registration)</li>
             <li><strong>Legitimate interests:</strong> We have a legitimate interest in organizing the conference and conducting academic activities</li>
@@ -159,15 +159,15 @@ const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onClose }) => {
           <h3 className="text-2xl font-bold text-govt-navy mt-8">5. How We Share Your Information</h3>
           
           <h4 className="text-xl font-semibold text-govt-navy mt-6">5.1 Within the Conference Organization</h4>
-          <ul>
+          <ul className="list-disc pl-5 space-y-2 text-slate-600">
             <li>Conference organizing committee members</li>
             <li>Peer reviewers for abstract and paper evaluation</li>
             <li>Technical support staff</li>
           </ul>
 
           <h4 className="text-xl font-semibold text-govt-navy mt-6">5.2 With Third Parties</h4>
-          <p>We may share your information with:</p>
-          <ul>
+          <p className="mb-2">We may share your information with:</p>
+          <ul className="list-disc pl-5 space-y-2 text-slate-600">
             <li><strong>Academic publishers:</strong> Selected papers may be shared with Springer Nature (OPSEARCH) and other SCOPUS-indexed journals</li>
             <li><strong>Payment processors:</strong> Bank details for payment verification</li>
             <li><strong>Accommodation providers:</strong> For participants who opt for accommodation packages</li>
@@ -176,8 +176,8 @@ const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onClose }) => {
           </ul>
 
           <h4 className="text-xl font-semibold text-govt-navy mt-6">5.3 Public Information</h4>
-          <p>The following may be made public:</p>
-          <ul>
+          <p className="mb-2">The following may be made public:</p>
+          <ul className="list-disc pl-5 space-y-2 text-slate-600">
             <li>Author names and affiliations in conference programs</li>
             <li>Abstracts in conference materials</li>
             <li>Published papers in proceedings and journals</li>
@@ -185,19 +185,19 @@ const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onClose }) => {
           </ul>
 
           <h3 className="text-2xl font-bold text-govt-navy mt-8">6. Data Retention</h3>
-          <p>We retain your personal information for the following periods:</p>
-          <ul>
+          <p className="mb-2">We retain your personal information for the following periods:</p>
+          <ul className="list-disc pl-5 space-y-2 text-slate-600">
             <li><strong>Registration data:</strong> 5 years after the conference for record-keeping and potential follow-up events</li>
             <li><strong>Submitted abstracts and papers:</strong> Indefinitely for academic archives</li>
             <li><strong>Payment records:</strong> 7 years for accounting and tax compliance</li>
             <li><strong>Website analytics:</strong> 2 years</li>
             <li><strong>Email correspondence:</strong> 3 years</li>
           </ul>
-          <p>You may request earlier deletion of your data, subject to legal and legitimate business requirements.</p>
+          <p className="mt-2">You may request earlier deletion of your data, subject to legal and legitimate business requirements.</p>
 
           <h3 className="text-2xl font-bold text-govt-navy mt-8">7. Your Rights</h3>
-          <p>Under Indian data protection principles, you have the following rights:</p>
-          <ul>
+          <p className="mb-2">Under Indian data protection principles, you have the following rights:</p>
+          <ul className="list-disc pl-5 space-y-2 text-slate-600">
             <li><strong>Access:</strong> Request copies of your personal information</li>
             <li><strong>Correction:</strong> Request correction of inaccurate or incomplete information</li>
             <li><strong>Deletion:</strong> Request deletion of your personal information, subject to legal retention requirements</li>
@@ -205,12 +205,12 @@ const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onClose }) => {
             <li><strong>Data Portability:</strong> Request your data in a structured, machine-readable format</li>
             <li><strong>Withdraw Consent:</strong> Withdraw your consent at any time (may affect conference participation)</li>
           </ul>
-          <p>To exercise these rights, please contact us at: <a href={`mailto:${CONFERENCE_DETAILS.email}`} className="text-govt-blue hover:text-govt-accent underline">{CONFERENCE_DETAILS.email}</a></p>
+          <p className="mt-4">To exercise these rights, please contact us at: <a href={`mailto:${CONFERENCE_DETAILS.email}`} className="text-govt-blue hover:text-govt-accent underline font-medium">{CONFERENCE_DETAILS.email}</a></p>
 
           <h3 className="text-2xl font-bold text-govt-navy mt-8">8. Cookies and Tracking Technologies</h3>
           
           <h4 className="text-xl font-semibold text-govt-navy mt-6">8.1 Types of Cookies We Use</h4>
-          <ul>
+          <ul className="list-disc pl-5 space-y-2 text-slate-600">
             <li><strong>Essential cookies:</strong> Required for website functionality</li>
             <li><strong>Analytics cookies:</strong> Help us understand how visitors use our website</li>
             <li><strong>Functional cookies:</strong> Remember your preferences</li>
@@ -220,62 +220,62 @@ const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onClose }) => {
           <p>You can control cookies through your browser settings. However, disabling cookies may affect website functionality.</p>
 
           <h3 className="text-2xl font-bold text-govt-navy mt-8">9. Security Measures</h3>
-          <p>We implement appropriate technical and organizational measures to protect your personal information:</p>
-          <ul>
+          <p className="mb-2">We implement appropriate technical and organizational measures to protect your personal information:</p>
+          <ul className="list-disc pl-5 space-y-2 text-slate-600">
             <li>Secure data transmission (HTTPS)</li>
             <li>Access controls and authentication</li>
             <li>Regular security assessments</li>
             <li>Staff training on data protection</li>
             <li>Secure storage of physical documents</li>
           </ul>
-          <p className="font-semibold">However, no method of transmission over the internet is 100% secure. We cannot guarantee absolute security.</p>
+          <p className="font-semibold mt-2 text-orange-600">However, no method of transmission over the internet is 100% secure. We cannot guarantee absolute security.</p>
 
           <h3 className="text-2xl font-bold text-govt-navy mt-8">10. Third-Party Links</h3>
           <p>Our website may contain links to third-party websites (e.g., Google Maps, external sponsors). We are not responsible for the privacy practices of these external sites. We encourage you to review their privacy policies.</p>
 
           <h3 className="text-2xl font-bold text-govt-navy mt-8">11. Children's Privacy</h3>
           <p>Our website is not intended for individuals under 18 years of age. We do not knowingly collect personal information from children. If we become aware of such collection, we will delete the information promptly.</p>
-          <p>Students under 18 must have parental or guardian consent to register for the conference.</p>
+          <p className="mt-2">Students under 18 must have parental or guardian consent to register for the conference.</p>
 
           <h3 className="text-2xl font-bold text-govt-navy mt-8">12. Changes to This Privacy Policy</h3>
           <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated "Last Updated" date. Significant changes will be communicated via email to registered participants.</p>
-          <p>Your continued use of the website after changes indicates acceptance of the updated policy.</p>
+          <p className="mt-2">Your continued use of the website after changes indicates acceptance of the updated policy.</p>
 
           <h3 className="text-2xl font-bold text-govt-navy mt-8">13. Data Protection Officer</h3>
-          <p>For data protection inquiries, please contact:</p>
-          <div className="bg-slate-50 p-6 rounded-lg border border-slate-200 my-4">
-            <p className="font-semibold text-govt-navy">ICAORFDI-2026 Data Protection Contact</p>
-            <p>Dr. Chitaranjan Sharma (Conference Chair)</p>
-            <p>Government Holkar Science College, Indore</p>
-            <p>Email: <a href={`mailto:${CONFERENCE_DETAILS.email}`} className="text-govt-blue hover:text-govt-accent underline">{CONFERENCE_DETAILS.email}</a></p>
+          <p className="mb-4">For data protection inquiries, please contact:</p>
+          <div className="bg-slate-50 p-6 rounded-lg border border-slate-200 my-4 shadow-sm">
+            <p className="font-semibold text-govt-navy text-lg">ICAORFDI-2026 Data Protection Contact</p>
+            <p className="text-slate-700 mt-2">Dr. Chitaranjan Sharma (Conference Chair)</p>
+            <p className="text-slate-600">Government Holkar Science College, Indore</p>
+            <p className="text-slate-600 mt-1">Email: <a href={`mailto:${CONFERENCE_DETAILS.email}`} className="text-govt-blue hover:text-govt-accent underline">{CONFERENCE_DETAILS.email}</a></p>
           </div>
 
           <h3 className="text-2xl font-bold text-govt-navy mt-8">14. Complaints</h3>
-          <p>If you have concerns about how we handle your personal information, you may file a complaint with us at <a href={`mailto:${CONFERENCE_DETAILS.email}`} className="text-govt-blue hover:text-govt-accent underline">{CONFERENCE_DETAILS.email}</a>.</p>
-          <p>If you are not satisfied with our response, you may escalate your complaint to the appropriate data protection authority in India.</p>
+          <p>If you have concerns about how we handle your personal information, you may file a complaint with us at <a href={`mailto:${CONFERENCE_DETAILS.email}`} className="text-govt-blue hover:text-govt-accent underline font-medium">{CONFERENCE_DETAILS.email}</a>.</p>
+          <p className="mt-2">If you are not satisfied with our response, you may escalate your complaint to the appropriate data protection authority in India.</p>
 
           <h3 className="text-2xl font-bold text-govt-navy mt-8">15. Contact Information</h3>
-          <p>For any questions, concerns, or requests regarding this Privacy Policy or your personal information, please contact:</p>
-          <div className="bg-slate-50 p-6 rounded-lg border border-slate-200 my-4">
-            <p className="font-semibold text-govt-navy">ICAORFDI-2026 Conference Committee</p>
-            <p>Government Holkar Science College, Indore, Madhya Pradesh</p>
-            <p>Email: <a href={`mailto:${CONFERENCE_DETAILS.email}`} className="text-govt-blue hover:text-govt-accent underline">{CONFERENCE_DETAILS.email}</a></p>
-            <p>Website: <a href={`http://${CONFERENCE_DETAILS.website}`} className="text-govt-blue hover:text-govt-accent underline">{CONFERENCE_DETAILS.website}</a></p>
+          <p className="mb-4">For any questions, concerns, or requests regarding this Privacy Policy or your personal information, please contact:</p>
+          <div className="bg-slate-50 p-6 rounded-lg border border-slate-200 my-4 shadow-sm">
+            <p className="font-semibold text-govt-navy text-lg">ICAORFDI-2026 Conference Committee</p>
+            <p className="text-slate-700 mt-2">Government Holkar Science College, Indore, Madhya Pradesh</p>
+            <p className="text-slate-600 mt-1">Email: <a href={`mailto:${CONFERENCE_DETAILS.email}`} className="text-govt-blue hover:text-govt-accent underline">{CONFERENCE_DETAILS.email}</a></p>
+            <p className="text-slate-600">Website: <a href={`http://${CONFERENCE_DETAILS.website}`} target="_blank" rel="noreferrer" className="text-govt-blue hover:text-govt-accent underline">{CONFERENCE_DETAILS.website}</a></p>
           </div>
 
           
-          <div className="bg-gradient-to-br from-govt-accent/5 to-transparent border border-govt-accent/20 p-8 rounded-2xl mt-8">
-            <p className="text-slate-700 font-semibold text-center text-lg mb-2">Consent Statement</p>
+          <div className="bg-gradient-to-br from-govt-accent/5 to-transparent border border-govt-accent/20 p-8 rounded-2xl mt-12">
+            <p className="text-govt-navy font-bold text-center text-lg mb-2">Consent Statement</p>
             <p className="text-slate-600 leading-relaxed text-center">By using this website and registering for the conference, you acknowledge that you have read, understood, and agree to this Privacy Policy and consent to the collection, use, and sharing of your information as described herein.</p>
           </div>
           </div>
         </div>
 
         {/* Footer CTA */}
-        <div className="mt-12 text-center">
+        <div className="mt-12 text-center pb-12">
           <button
             onClick={onClose}
-            className="group inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-govt-blue to-govt-navy text-white rounded-full font-bold text-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
+            className="group inline-flex items-center gap-3 px-10 py-4 bg-gradient-to-r from-govt-blue to-govt-navy text-white rounded-full font-bold text-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
           >
             <svg className="w-6 h-6 transform group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
