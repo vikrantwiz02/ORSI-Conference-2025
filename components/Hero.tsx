@@ -118,9 +118,9 @@ const Hero: React.FC = () => {
                 </div>
 
                 {/* Right Side Visuals */}
-                <div className="w-full lg:w-1/2 relative mt-8 lg:mt-0 flex justify-center lg:justify-end">
+                <div className="w-full lg:w-1/2 relative mt-8 lg:mt-0 flex justify-center lg:justify-end px-6 sm:px-0">
                     {/* Main Visual Card */}
-                    <div className="relative w-full max-w-lg lg:max-w-xl">
+                    <div className="relative w-full max-w-lg lg:max-w-xl pb-12 sm:pb-16 pt-6 sm:pt-12">
                         {/* Card Container with Rotation */}
                         <div className="relative bg-white p-2 rounded-[2rem] shadow-2xl transform rotate-1 transition-transform duration-500 hover:rotate-0 z-20 aspect-[4/3] overflow-hidden border border-slate-100">
                              {/* College Image */}
@@ -133,7 +133,7 @@ const Hero: React.FC = () => {
                         </div>
 
                         {/* Floating Info Cards */}
-                        <div className="absolute -bottom-6 -left-4 sm:-bottom-8 sm:-left-6 bg-white p-4 sm:p-5 rounded-2xl shadow-xl border border-slate-100 min-w-[180px] text-left z-30 animate-fade-in-up">
+                        <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 sm:left-auto sm:translate-x-0 sm:-bottom-8 sm:-left-6 bg-white p-4 sm:p-5 rounded-2xl shadow-xl border border-slate-100 min-w-[180px] text-left z-30 animate-fade-in-up">
                             <div className="flex items-center gap-3">
                                 <div className="bg-blue-50 p-2.5 rounded-xl text-govt-blue">
                                     <CalendarIcon className="w-5 h-5" />
@@ -150,7 +150,7 @@ const Hero: React.FC = () => {
                             href="https://maps.app.goo.gl/sZ6dZiF9nX3BJ5DV8"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="absolute -top-6 -right-4 sm:-top-8 sm:-right-6 bg-white p-4 sm:p-5 rounded-2xl shadow-xl border border-slate-100 min-w-[200px] max-w-[280px] text-left hidden sm:block z-30 animate-fade-in-down delay-100 hover:scale-105 hover:shadow-2xl transition-all duration-300 group cursor-pointer"
+                            className="absolute -top-4 left-1/2 -translate-x-1/2 sm:left-auto sm:translate-x-0 sm:-top-8 sm:-right-6 bg-white p-4 sm:p-5 rounded-2xl shadow-xl border border-slate-100 min-w-[200px] max-w-[280px] text-left z-30 animate-fade-in-down delay-100 hover:scale-105 hover:shadow-2xl transition-all duration-300 group cursor-pointer"
                         >
                             <div className="flex items-center gap-3">
                                 <div className="bg-orange-50 p-2.5 rounded-xl text-govt-accent group-hover:bg-govt-accent group-hover:text-white transition-colors">
