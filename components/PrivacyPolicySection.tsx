@@ -224,16 +224,6 @@ const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onClose }) => {
             </div>
         </div>
 
-        {/* Footer Action */}
-        <div className="text-center pb-8">
-             <button 
-                onClick={onClose}
-                className="bg-govt-blue hover:bg-blue-700 text-white font-bold py-4 px-12 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1"
-             >
-                Return to Conference Portal
-             </button>
-        </div>
-
       </main>
     </div>
   );

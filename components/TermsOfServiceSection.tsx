@@ -232,16 +232,6 @@ const TermsOfServicePage: React.FC<TermsOfServicePageProps> = ({ onClose, onPriv
              <p className="text-govt-navy font-medium">By using this Website, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.</p>
         </div>
 
-        {/* Bottom Action */}
-        <div className="text-center pb-8">
-             <button 
-                onClick={onClose}
-                className="bg-govt-navy hover:bg-slate-800 text-white font-bold py-4 px-12 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1"
-             >
-                Return to Conference Portal
-             </button>
-        </div>
-
       </main>
     </div>
   );
