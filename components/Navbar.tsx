@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { NAV_ITEMS, CONFERENCE_DETAILS } from '../constants';
-import collegeLogo from '../assets/logo.png';
 
 interface NavbarProps {
   onNavigateHome?: () => void;
@@ -78,7 +77,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigateHome }) => {
             <div className="flex items-center space-x-3 sm:space-x-4 max-w-[85%] lg:max-w-none">
                <div className="flex-shrink-0">
                   <img 
-                    src={collegeLogo} 
+                    src="/logo.jpg" 
                     alt="Govt. Holkar Science College Logo" 
                     className="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 object-contain transform transition-transform hover:scale-105"
                   />

@@ -45,7 +45,7 @@ export function App() {
             id="about-college"
             title="About Govt. Holkar Science College"
             content={ABOUT_COLLEGE}
-            imageSrc="/assets/college_image.jpg"
+            imageSrc="/college_image.jpg"
             accentColor="blue"
         />
 
@@ -53,7 +53,7 @@ export function App() {
             id="about-orsi"
             title="About ORSI"
             content={ABOUT_ORSI}
-            imageSrc="/assets/college_image.jpg"
+            imageSrc="/college_image.jpg"
             isReversed={true}
             accentColor="orange"
         />
