@@ -83,3 +83,9 @@ The site is a static build. Any static hosting will work:
 - No environment variables are required for local development.
 - Styling is component-scoped using modern CSS classes defined in the project.
 
+## Legal
+
+- **License:** [Proprietary - All Rights Reserved](./LICENSE)
+- **Terms of Service:** [TERMS_OF_SERVICE.md](./TERMS_OF_SERVICE.md)
+- **Privacy Policy:** [PRIVACY_POLICY.md](./PRIVACY_POLICY.md)
+

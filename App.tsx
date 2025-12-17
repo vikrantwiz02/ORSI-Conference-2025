@@ -10,6 +10,8 @@ import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import SponsorsSection from './components/SponsorsSection';
 import ContactSection from './components/ContactSection';
+import TermsOfServiceSection from './components/TermsOfServiceSection';
+import PrivacyPolicySection from './components/PrivacyPolicySection';
 import { ABOUT_COLLEGE, ABOUT_ORSI } from './constants';
 
 export function App() {
@@ -76,6 +78,10 @@ export function App() {
         </section>
 
         <ContactSection />
+
+        <TermsOfServiceSection />
+
+        <PrivacyPolicySection />
       </main>
       <Footer />
       <ScrollToTop />

@@ -74,8 +74,8 @@ const Footer: React.FC = () => {
         <div className="border-t border-slate-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
             <p>© 2026 Govt. Holkar Science College. All rights reserved.</p>
             <div className="flex gap-6 mt-4 md:mt-0">
-                <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-                <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+                <a href="#privacy-policy" className="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#terms-of-service" className="hover:text-white transition-colors">Terms of Service</a>
             </div>
         </div>
       </div>
