@@ -71,7 +71,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                     </a>
                 </li>
                 <li>
-                    <a href="#" className="flex items-center gap-2 group hover:text-white transition-colors bg-slate-800/30 p-3 rounded-lg border border-transparent hover:border-slate-700">
+                    <a href="https://collegeholkar.org/" target="_blank" rel="noreferrer" className="flex items-center gap-2 group hover:text-white transition-colors bg-slate-800/30 p-3 rounded-lg border border-transparent hover:border-slate-700">
                         <ExternalLinkIcon className="w-5 h-5 text-govt-blue group-hover:text-white transition-colors" />
                         <span className="text-sm font-medium">Holkar Science College</span>
                     </a>
