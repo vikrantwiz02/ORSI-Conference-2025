@@ -21,14 +21,19 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <p className="text-slate-400 leading-relaxed mb-8 max-w-sm">
                 Empowering the future through Applications of Operations Research in Finance, Defence, and Industry. Join us for the 58th Annual Convention of ORSI.
             </p>
-            <div className="flex items-start gap-4 text-slate-400 bg-slate-800/50 p-4 rounded-xl border border-slate-700/50 max-w-md">
-                <div className="bg-slate-700 p-2 rounded-full text-govt-accent shrink-0">
+            <a 
+              href="https://maps.app.goo.gl/aRZZMvii9XykNMK48" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-start gap-4 text-slate-400 bg-slate-800/50 p-4 rounded-xl border border-slate-700/50 max-w-md hover:border-govt-accent hover:text-white transition-all group"
+            >
+                <div className="bg-slate-700 p-2 rounded-full text-govt-accent group-hover:bg-govt-accent group-hover:text-white shrink-0 transition-colors">
                     <MapPinIcon className="w-5 h-5" />
                 </div>
                 <span className="text-sm font-medium pt-1">
                     {CONFERENCE_DETAILS.venue}
                 </span>
-            </div>
+            </a>
           </div>
 
           {/* Spacer */}

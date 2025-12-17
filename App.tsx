@@ -45,7 +45,7 @@ export function App() {
             id="about-college"
             title="About Govt. Holkar Science College"
             content={ABOUT_COLLEGE}
-            imageSrc="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+            imageSrc="/assets/college_image.jpg"
             accentColor="blue"
         />
 
@@ -53,7 +53,7 @@ export function App() {
             id="about-orsi"
             title="About ORSI"
             content={ABOUT_ORSI}
-            imageSrc="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+            imageSrc="/assets/college_image.jpg"
             isReversed={true}
             accentColor="orange"
         />
@@ -81,7 +81,7 @@ export function App() {
                 
                 <div className="bg-white p-2 rounded-3xl shadow-2xl inline-block w-full max-w-5xl h-[450px] md:h-[550px] relative overflow-hidden">
                     <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.672439169608!2d75.87535561541534!3d22.70324888511566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fd0a9372138b%3A0x7052945229715124!2sGovernment%20Holkar%20Science%20College!5e0!3m2!1sen!2sin!4v1675765432109!5m2!1sen!2sin" 
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14722.728418699493!2d75.8761646!3d22.7029648!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fd0a9372138b%3A0x7052945229715124!2sGovernment%20Holkar%20(Model%2C%20Autonomous)%20Science%20College!5e0!3m2!1sen!2sin!4v1734444700000!5m2!1sen!2sin" 
                         width="100%" 
                         height="100%" 
                         style={{ border: 0, borderRadius: '1rem' }} 

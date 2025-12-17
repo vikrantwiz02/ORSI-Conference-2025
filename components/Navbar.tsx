@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { NAV_ITEMS, CONFERENCE_DETAILS } from '../constants';
-import { AcademicCapIcon } from './Icons';
-import collegeLogo from '../assets/logo.jpg';
+import collegeLogo from '../assets/logo.png';
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  onNavigateHome?: () => void;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ onNavigateHome }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -18,6 +21,26 @@ const Navbar: React.FC = () => {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     setIsOpen(false);
+
+    // If we're on a legal page, navigate home first
+    if (onNavigateHome) {
+      onNavigateHome();
+      // Add a small delay to allow page transition before scrolling
+      setTimeout(() => {
+        const targetId = href.replace('#', '');
+        const element = document.getElementById(targetId);
+        if (element) {
+          const headerOffset = 100;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.scrollY - headerOffset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }, 100);
+      return;
+    }
 
     const targetId = href.replace('#', '');
     const element = document.getElementById(targetId);

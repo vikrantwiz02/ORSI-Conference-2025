@@ -49,7 +49,6 @@ npm run preview
 	├─ FAQSection.tsx
 	├─ Footer.tsx
 	├─ Hero.tsx
-	├─ HeroCarousel.tsx
 	├─ Icons.tsx
 	├─ InfoSection.tsx
 	├─ Navbar.tsx

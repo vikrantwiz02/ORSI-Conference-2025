@@ -11,7 +11,6 @@ const Hero: React.FC = () => {
   });
 
   useEffect(() => {
-    // Target date: March 6, 2026 at 9:00 AM
     const targetDate = new Date('2026-03-06T09:00:00').getTime();
 
     const calculateTimeLeft = () => {
@@ -126,7 +125,7 @@ const Hero: React.FC = () => {
                         <div className="relative bg-white p-2 rounded-[2rem] shadow-2xl transform rotate-1 transition-transform duration-500 hover:rotate-0 z-20 aspect-[4/3] overflow-hidden border border-slate-100">
                              {/* College Image */}
                              <img 
-                                src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                                src="/assets/college_image.jpg"
                                 alt="Govt. Holkar Science College"
                                 className="w-full h-full object-cover rounded-[1.5rem]"
                              />

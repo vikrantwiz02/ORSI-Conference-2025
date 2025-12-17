@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { CONFERENCE_DETAILS } from '../constants';
-import { AcademicCapIcon } from './Icons';
+import Navbar from './Navbar';
 
 interface TermsOfServicePageProps {
   onClose: () => void;
@@ -39,33 +39,7 @@ const TermsOfServicePage: React.FC<TermsOfServicePageProps> = ({ onClose, onPriv
 
   return (
     <div className="min-h-screen bg-slate-100 font-sans text-slate-600 selection:bg-govt-blue selection:text-white">
-      {/* Header */}
-      <header className="bg-white shadow-sm sticky top-0 z-50 border-t-4 border-govt-blue">
-        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-             <div className="flex items-center gap-3">
-                 <div className="bg-govt-navy p-2 rounded-lg text-white shadow-md">
-                    <AcademicCapIcon className="w-6 h-6" />
-                 </div>
-                 <div className="flex flex-col">
-                     <h1 className="text-xs sm:text-sm font-bold text-govt-navy uppercase tracking-wide leading-tight">
-                        {CONFERENCE_DETAILS.host}
-                     </h1>
-                     <span className="text-[10px] sm:text-xs text-govt-accent font-bold uppercase tracking-wider">
-                        {CONFERENCE_DETAILS.acronym}
-                     </span>
-                 </div>
-             </div>
-             <button 
-                onClick={onClose}
-                className="group flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-govt-blue transition-colors bg-slate-50 hover:bg-blue-50 px-4 py-2 rounded-full border border-slate-200 hover:border-blue-100"
-             >
-                <span className="hidden sm:inline">Back to Portal</span>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 transform group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                </svg>
-             </button>
-        </div>
-      </header>
+      <Navbar onNavigateHome={onClose} />
 
       <main className="container mx-auto px-4 py-12 max-w-5xl">
         
