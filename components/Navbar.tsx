@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NAV_ITEMS, CONFERENCE_DETAILS } from '../constants';
 import { AcademicCapIcon } from './Icons';
+import collegeLogo from '../assets/logo.jpg';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,8 +53,12 @@ const Navbar: React.FC = () => {
             
             {/* Logo Area */}
             <div className="flex items-center space-x-3 sm:space-x-4 max-w-[85%] lg:max-w-none">
-               <div className="bg-gradient-to-br from-govt-navy to-govt-blue p-2 sm:p-2.5 rounded-xl shadow-lg text-white transform transition-transform hover:scale-105 flex-shrink-0">
-                  <AcademicCapIcon className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8" />
+               <div className="flex-shrink-0">
+                  <img 
+                    src={collegeLogo} 
+                    alt="Govt. Holkar Science College Logo" 
+                    className="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 object-contain transform transition-transform hover:scale-105"
+                  />
                </div>
                <div className="flex flex-col">
                  <h1 className="text-[10px] sm:text-xs lg:text-sm font-bold text-govt-navy leading-tight uppercase tracking-wide">
