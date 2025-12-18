@@ -59,11 +59,6 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigateHome }) => {
 
   return (
     <>
-      {/* Top Govt Bar */}
-      <div className="bg-govt-navy text-white py-2 px-4 text-[10px] md:text-xs font-medium tracking-widest text-center uppercase z-50 relative">
-        Government of Madhya Pradesh | Higher Education Department
-      </div>
-
       {/* Main Navbar */}
       <header 
         className={`sticky top-0 z-50 transition-all duration-300 ${

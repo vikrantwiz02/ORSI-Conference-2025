@@ -77,12 +77,12 @@ const Hero: React.FC = () => {
                     </h2>
 
                     {/* Added Subheading */}
-                    <p className="text-base md:text-lg font-medium text-govt-accent mb-6">
-                        Leveraging Data and Analytics for Global Challenges
+                    <p className="text-base md:text-lg font-medium text-govt-accent mb-6 text-center">
+                        &
                     </p>
 
                     <p className="text-sm md:text-base text-slate-500 mb-8 italic border-l-4 border-govt-accent pl-4 lg:ml-0 inline-block lg:block text-left bg-white/50 lg:bg-transparent p-2 lg:p-0 rounded lg:rounded-none">
-                        & {CONFERENCE_DETAILS.subEvent}
+                         {CONFERENCE_DETAILS.subEvent}
                     </p>
 
                     {/* Countdown Timer */}
