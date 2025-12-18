@@ -107,7 +107,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigateHome }) => {
                   {item.label}
                 </a>
               ))}
-              <div className="pl-4 ml-2 border-l border-slate-200">
+              {/* <div className="pl-4 ml-2 border-l border-slate-200">
                   <a 
                     href="#register" 
                     onClick={(e) => handleNavClick(e, '#register')}
@@ -115,7 +115,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigateHome }) => {
                   >
                       Register Now
                   </a>
-              </div>
+              </div> */}
             </nav>
 
             {/* Mobile Menu Button */}
@@ -149,13 +149,13 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigateHome }) => {
                 {item.label}
               </a>
             ))}
-             <a
+             {/* <a
                 href="#register"
                 onClick={(e) => handleNavClick(e, '#register')}
                 className="block text-center bg-govt-accent text-white px-4 py-3 rounded-xl text-base font-bold mt-4 shadow-md mx-4 cursor-pointer"
               >
                 Register Now
-              </a>
+              </a> */}
           </div>
         </div>
       </header>

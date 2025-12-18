@@ -81,7 +81,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         </div>
 
         <div className="border-t border-slate-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
-            <p>© 2026 Govt. Holkar Science College. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Govt. Holkar Science College. All rights reserved.</p>
             <div className="flex gap-6 mt-4 md:mt-0">
                 <button 
                   onClick={() => onNavigate?.('privacy')} 

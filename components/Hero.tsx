@@ -98,22 +98,14 @@ const Hero: React.FC = () => {
 
                     <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8">
                          {/* Updated Registration Button with better responsiveness */}
-                         <a href="#register" className="bg-govt-accent hover:bg-orange-700 text-white px-8 py-3.5 rounded-xl font-bold text-lg shadow-xl shadow-orange-500/20 transition-all transform hover:-translate-y-1 hover:scale-105 text-center w-full sm:w-auto sm:min-w-[180px] flex items-center justify-center">
-                            Register Now
+                         <a href="/Brochure.pdf" download="ICAORFDI-2026-Brochure.pdf" className="bg-govt-accent hover:bg-orange-700 text-white px-8 py-3.5 rounded-xl font-bold text-lg shadow-xl shadow-orange-500/20 transition-all transform hover:-translate-y-1 hover:scale-105 text-center w-full sm:w-auto sm:min-w-[180px] flex items-center justify-center">
+                            Download Brochure <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                            </svg>
                          </a>
                          <a href="#contact" className="bg-white hover:bg-slate-50 text-govt-navy border border-slate-200 px-8 py-3.5 rounded-xl font-bold text-lg shadow-md transition-all hover:border-govt-blue w-full sm:w-auto sm:min-w-[180px] text-center">
                             Contact Us
                          </a>
-                    </div>
-
-                    {/* Secondary Download Button */}
-                    <div className="flex justify-center lg:justify-start">
-                        <a href="/Brochure.pdf" download="ICAORFDI-2026-Brochure.pdf" className="inline-flex items-center gap-2 text-slate-500 hover:text-govt-blue font-medium text-sm transition-colors group px-4 py-2 rounded-lg hover:bg-blue-50">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                            </svg>
-                            Download Brochure
-                        </a>
                     </div>
                 </div>
 

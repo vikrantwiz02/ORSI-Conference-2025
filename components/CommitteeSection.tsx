@@ -4,7 +4,6 @@ import { PATRONS, CHAIRS, ADVISORY_COMMITTEE, ORGANIZING_COMMITTEE } from '../co
 const CommitteeSection: React.FC = () => {
   const [showAllAdvisory, setShowAllAdvisory] = useState(false);
   
-  // Show first 9 members by default to keep the UI clean
   const displayedAdvisory = showAllAdvisory ? ADVISORY_COMMITTEE : ADVISORY_COMMITTEE.slice(0, 9);
 
   return (
