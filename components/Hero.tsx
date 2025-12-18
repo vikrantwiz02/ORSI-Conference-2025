@@ -63,7 +63,7 @@ const Hero: React.FC = () => {
                           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-govt-accent opacity-75"></span>
                           <span className="relative inline-flex rounded-full h-2 w-2 bg-govt-accent"></span>
                         </span>
-                        <span className="text-xs font-bold tracking-widest uppercase text-slate-500">Joint Conference 2026</span>
+                        <span className="text-xs font-bold tracking-widest uppercase text-slate-500">ORSI Indore Chapter</span>
                     </div>
 
                     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-black text-govt-navy leading-tight mb-4 font-serif tracking-tight">

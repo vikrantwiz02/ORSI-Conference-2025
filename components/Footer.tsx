@@ -65,7 +65,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </h4>
             <ul className="space-y-4">
                 <li>
-                    <a href={`http://${CONFERENCE_DETAILS.website}`} target="_blank" rel="noreferrer" className="flex items-center gap-2 group hover:text-white transition-colors bg-slate-800/30 p-3 rounded-lg border border-transparent hover:border-slate-700">
+                    <a href={`https://orsihq.org/`} target="_blank" rel="noreferrer" className="flex items-center gap-2 group hover:text-white transition-colors bg-slate-800/30 p-3 rounded-lg border border-transparent hover:border-slate-700">
                         <ExternalLinkIcon className="w-5 h-5 text-govt-blue group-hover:text-white transition-colors" />
                         <span className="text-sm font-medium">ORSI Official Website</span>
                     </a>

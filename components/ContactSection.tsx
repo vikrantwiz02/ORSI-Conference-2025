@@ -6,46 +6,13 @@ const ContactSection: React.FC = () => {
   return (
     <section id="contact" className="py-16 lg:py-24 bg-surface relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
+        <h2 className="text-3xl md:text-5xl font-serif font-black text-govt-navy mb-4 tracking-tight text-center">
+                    Contact Us
+                </h2>
+        <div className="max-w-2xl mx-auto">
           
-          {/* Contact Form */}
-          <div className="lg:w-3/5">
-             <div className="mb-8">
-                <span className="text-govt-accent font-bold tracking-widest uppercase text-xs">Get in Touch</span>
-                <h2 className="text-3xl md:text-4xl font-serif font-bold text-govt-navy mt-2">Send us a Message</h2>
-             </div>
-             
-             <form className="bg-white p-6 sm:p-8 rounded-2xl shadow-lg border border-slate-100">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                    <div>
-                        <label className="block text-sm font-semibold text-slate-700 mb-2">Full Name</label>
-                        <input type="text" className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-govt-blue focus:border-transparent outline-none transition-all" placeholder="Your Name" />
-                    </div>
-                    <div>
-                        <label className="block text-sm font-semibold text-slate-700 mb-2">Email Address</label>
-                        <input type="email" className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-govt-blue focus:border-transparent outline-none transition-all" placeholder="your.email@domain.com" />
-                    </div>
-                </div>
-                <div className="mb-6">
-                    <label className="block text-sm font-semibold text-slate-700 mb-2">Subject</label>
-                    <select className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-govt-blue focus:border-transparent outline-none transition-all bg-white">
-                        <option>General Inquiry</option>
-                        <option>Abstract Submission</option>
-                        <option>Registration Issue</option>
-                    </select>
-                </div>
-                <div className="mb-8">
-                    <label className="block text-sm font-semibold text-slate-700 mb-2">Message</label>
-                    <textarea rows={4} className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-govt-blue focus:border-transparent outline-none transition-all" placeholder="How can we help you?"></textarea>
-                </div>
-                <button type="button" className="w-full bg-govt-navy hover:bg-slate-800 text-white font-bold py-4 rounded-xl shadow-lg transition-all transform hover:-translate-y-1">
-                    Send Message
-                </button>
-             </form>
-          </div>
-
           {/* Contact Info */}
-          <div className="lg:w-2/5 flex flex-col justify-center">
+          <div className="flex flex-col justify-center">
              <div className="bg-govt-blue p-8 rounded-3xl text-white shadow-xl relative overflow-hidden">
                 <div className="absolute top-0 right-0 -mr-10 -mt-10 w-40 h-40 bg-white opacity-10 rounded-full blur-2xl"></div>
                 <div className="absolute bottom-0 left-0 -ml-10 -mb-10 w-40 h-40 bg-govt-accent opacity-20 rounded-full blur-2xl"></div>

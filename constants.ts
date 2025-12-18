@@ -4,7 +4,7 @@ export const CONFERENCE_DETAILS = {
   acronym: "ICAORFDI-2026",
   subEvent: "58th Annual Convention of Operational Research Society of India (ORSI-2026)",
   organizer: "ORSI Indore Chapter",
-  host: "Government Holkar Science College, Indore",
+  host: "Operational Research Society of India",
   venue: "Govt. Holkar Science College, Indore, Madhya Pradesh",
   date: "06-08 March 2026",
   website: "https://orsi-2026.com",

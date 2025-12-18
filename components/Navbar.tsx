@@ -8,12 +8,30 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ onNavigateHome }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
+      const sections = NAV_ITEMS.map(item => item.href.replace('#', ''));
+      const scrollPosition = window.scrollY + 150;
+      
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const offsetTop = element.offsetTop;
+          const offsetBottom = offsetTop + element.offsetHeight;
+          
+          if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
     };
+    
     window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Call once on mount
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -72,36 +90,43 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigateHome }) => {
             <div className="flex items-center space-x-3 sm:space-x-4 max-w-[85%] lg:max-w-none">
                <div className="flex-shrink-0">
                   <img 
-                    src="/logo.jpg" 
-                    alt="Govt. Holkar Science College Logo" 
+                    src="/orsi_logo.png" 
+                    alt="ORSI Logo " 
                     className="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 object-contain transform transition-transform hover:scale-105"
                   />
                </div>
                <div className="flex flex-col">
-                 <h1 className="text-[10px] sm:text-xs lg:text-sm font-bold text-govt-navy leading-tight uppercase tracking-wide">
+                 <h1 className="text-xs sm:text-sm lg:text-base xl:text-lg font-bold text-govt-navy leading-tight uppercase tracking-wide">
                    {CONFERENCE_DETAILS.host}
                  </h1>
-                 <div className="flex items-center gap-1.5 sm:gap-2 mt-0.5">
+                 {/* <div className="flex items-center gap-1.5 sm:gap-2 mt-0.5">
                     <span className="inline-block w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-govt-accent shrink-0"></span>
                     <p className="text-[8px] sm:text-[10px] text-slate-500 font-semibold uppercase tracking-wider">
                         NAAC A++ Accredited
                     </p>
-                 </div>
+                 </div> */}
                </div>
             </div>
 
             {/* Desktop Nav */}
             <nav className="hidden lg:flex items-center space-x-1">
-              {NAV_ITEMS.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  onClick={(e) => handleNavClick(e, item.href)}
-                  className="text-slate-600 hover:text-govt-blue hover:bg-slate-50 px-3 py-2 rounded-full text-sm font-semibold transition-all duration-200 cursor-pointer whitespace-nowrap"
-                >
-                  {item.label}
-                </a>
-              ))}
+              {NAV_ITEMS.map((item) => {
+                const isActive = activeSection === item.href.replace('#', '');
+                return (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    onClick={(e) => handleNavClick(e, item.href)}
+                    className={`px-3 py-2 rounded-full font-semibold transition-all duration-200 cursor-pointer whitespace-nowrap ${
+                      isActive 
+                        ? 'text-govt-blue bg-blue-50 text-lg scale-110' 
+                        : 'text-slate-600 hover:text-govt-blue hover:bg-slate-50 text-sm'
+                    }`}
+                  >
+                    {item.label}
+                  </a>
+                );
+              })}
               {/* <div className="pl-4 ml-2 border-l border-slate-200">
                   <a 
                     href="#register" 
@@ -134,16 +159,23 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigateHome }) => {
         {/* Mobile Nav Menu */}
         <div className={`lg:hidden absolute w-full bg-white border-t border-slate-100 shadow-xl transition-all duration-300 ease-in-out origin-top ${isOpen ? 'scale-y-100 opacity-100' : 'scale-y-0 opacity-0 h-0 overflow-hidden'}`}>
           <div className="px-4 pt-2 pb-6 space-y-1">
-            {NAV_ITEMS.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                onClick={(e) => handleNavClick(e, item.href)}
-                className="block text-slate-700 hover:text-govt-blue hover:bg-slate-50 px-4 py-3 rounded-xl text-base font-medium cursor-pointer"
-              >
-                {item.label}
-              </a>
-            ))}
+            {NAV_ITEMS.map((item) => {
+              const isActive = activeSection === item.href.replace('#', '');
+              return (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  onClick={(e) => handleNavClick(e, item.href)}
+                  className={`block px-4 py-3 rounded-xl font-medium cursor-pointer ${
+                    isActive
+                      ? 'text-govt-blue bg-blue-50 text-lg font-bold'
+                      : 'text-slate-700 hover:text-govt-blue hover:bg-slate-50 text-base'
+                  }`}
+                >
+                  {item.label}
+                </a>
+              );
+            })}
              {/* <a
                 href="#register"
                 onClick={(e) => handleNavClick(e, '#register')}
