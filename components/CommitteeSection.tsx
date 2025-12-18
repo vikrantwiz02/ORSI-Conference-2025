@@ -80,7 +80,7 @@ const CommitteeSection: React.FC = () => {
         </div>
 
         {/* Organizing Committee */}
-        <div>
+        {/* <div>
             <h3 className="text-2xl font-bold text-govt-navy mb-8 text-center bg-slate-50 py-4 rounded-xl mx-auto max-w-3xl border border-slate-200">
                 Organizing Committee
             </h3>
@@ -92,7 +92,7 @@ const CommitteeSection: React.FC = () => {
                     </div>
                 ))}
             </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
