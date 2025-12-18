@@ -12,6 +12,7 @@ import SponsorsSection from './components/SponsorsSection';
 import ContactSection from './components/ContactSection';
 import TermsOfServicePage from './components/TermsOfServiceSection';
 import PrivacyPolicyPage from './components/PrivacyPolicySection';
+import { Analytics } from "@vercel/analytics/react"
 import { ABOUT_COLLEGE, ABOUT_ORSI } from './constants';
 
 export function App() {
@@ -99,6 +100,7 @@ export function App() {
       </main>
       <Footer onNavigate={handleNavigate} />
       <ScrollToTop />
+      <Analytics />
     </div>
   );
 }

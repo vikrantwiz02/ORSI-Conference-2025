@@ -118,7 +118,7 @@ For questions or concerns regarding these Terms of Service, please contact:
 **ICAORFDI-2026 Conference Committee**  
 Government Holkar Science College, Indore  
 Email: icaorfdi2026@gmail.com  
-Website: [https.orsi-2026.com](https://orsi-2026.com)
+Website: [https://orsiconference.org/](https://orsiconference.org/)
 
 ## 16. Severability
 
