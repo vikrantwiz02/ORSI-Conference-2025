@@ -77,11 +77,11 @@ const Hero: React.FC = () => {
                     </h2>
 
                     {/* Added Subheading */}
-                    <p className="text-base md:text-lg font-medium text-govt-accent mb-6 text-center">
+                    <p className="text-4xl md:text-5xl lg:text-6xl font-medium text-govt-accent mb-6 text-center">
                         &
                     </p>
 
-                    <p className="text-sm md:text-base text-slate-500 mb-8 italic border-l-4 border-govt-accent pl-4 lg:ml-0 inline-block lg:block text-left bg-white/50 lg:bg-transparent p-2 lg:p-0 rounded lg:rounded-none font-bold">
+                    <p className="text-lg md:text-xl lg:text-2xl font-bold text-teal-600 mb-8 italic border-l-4 border-teal-600 pl-4 lg:ml-0 inline-block lg:block text-left bg-teal-50/50 lg:bg-transparent p-2 lg:p-0 rounded lg:rounded-none leading-relaxed max-w-2xl mx-auto lg:mx-0">
                          {CONFERENCE_DETAILS.subEvent}
                     </p>
 

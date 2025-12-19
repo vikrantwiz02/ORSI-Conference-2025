@@ -18,7 +18,7 @@ const PARTNERS = [
     nameSecondary: "(Springer Nature)",
     role: "Publication Partner",
     type: "Journal",
-    logo: "/springer_logo.png"
+    logo: "/opsearch_logo.png"
   },
   {
     name: "Scopus",

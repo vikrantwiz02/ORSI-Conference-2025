@@ -90,18 +90,27 @@ const CommitteeSection: React.FC = () => {
                 Advisory Committee
             </h3>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4 mb-8">
-                {displayedAdvisory.map((member, idx) => (
-                    <div key={idx} className="flex items-start gap-3 p-4 bg-white rounded-xl hover:bg-blue-50 transition-colors border border-slate-100 hover:border-blue-100 shadow-sm">
-                        <div className="mt-1.5 w-2 h-2 rounded-full bg-govt-blue flex-shrink-0"></div>
-                        <p className="text-sm text-slate-700 font-medium">{member}</p>
-                    </div>
-                ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {displayedAdvisory.map((member, idx) => {
+                    const parts = member.split(', ');
+                    const name = parts[0];
+                    const affiliation = parts.slice(1).join(', ');
+                    return (
+                        <div key={idx} className="bg-slate-50 p-6 rounded-2xl text-center border-b-4 border-govt-blue hover:shadow-lg transition-shadow">
+                            <div className="w-24 h-24 bg-white shadow-sm rounded-full mx-auto mb-4 flex items-center justify-center text-3xl font-serif font-bold text-govt-blue border border-slate-100">
+                                {name.charAt(0)}
+                            </div>
+                            <p className="text-xs font-bold text-govt-accent uppercase tracking-wider mb-2">Advisory Member</p>
+                            <h3 className="text-lg font-bold text-govt-navy mb-2">{name}</h3>
+                            <p className="text-sm text-slate-600 leading-snug">{affiliation}</p>
+                        </div>
+                    );
+                })}
             </div>
             
             {/* Show More Button */}
             {ADVISORY_COMMITTEE.length > 9 && (
-                <div className="text-center">
+                <div className="text-center mt-8">
                     <button 
                         onClick={() => setShowAllAdvisory(!showAllAdvisory)}
                         className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-white border border-slate-300 text-govt-navy font-semibold hover:bg-slate-50 hover:border-govt-blue transition-all shadow-sm"
@@ -127,12 +136,15 @@ const CommitteeSection: React.FC = () => {
                 ORSI Council Members
             </h3>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {ORSI_COUNCIL_MEMBERS.map((member, idx) => (
                     member ? (
-                        <div key={idx} className="flex items-start gap-3 p-4 bg-white rounded-xl hover:bg-blue-50 transition-colors border border-slate-100 hover:border-blue-100 shadow-sm">
-                            <div className="mt-1.5 w-2 h-2 rounded-full bg-govt-blue flex-shrink-0"></div>
-                            <p className="text-sm text-slate-700 font-medium">{member}</p>
+                        <div key={idx} className="bg-slate-50 p-6 rounded-2xl text-center border-b-4 border-govt-accent hover:shadow-lg transition-shadow">
+                            <div className="w-24 h-24 bg-white shadow-sm rounded-full mx-auto mb-4 flex items-center justify-center text-3xl font-serif font-bold text-govt-accent border border-slate-100">
+                                {member.charAt(0)}
+                            </div>
+                            <p className="text-xs font-bold text-govt-blue uppercase tracking-wider mb-2">Council Member</p>
+                            <h3 className="text-lg font-bold text-govt-navy mb-2">{member}</h3>
                         </div>
                     ) : (
                         <div key={idx} className="invisible"></div>
