@@ -9,37 +9,72 @@ const CommitteeSection: React.FC = () => {
   return (
     <section id="committee" className="py-16 lg:py-24 bg-white border-t border-slate-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        {/* <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-govt-navy mb-4">
             Organizing Committee
           </h2>
           <div className="w-24 h-1 bg-govt-accent mx-auto rounded-full"></div>
-        </div>
+        </div> */}
 
         {/* Patrons & Chairs */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-            {PATRONS.map((person, idx) => (
-                <div key={idx} className="bg-slate-50 p-6 rounded-2xl text-center border-b-4 border-govt-blue hover:shadow-lg transition-shadow">
-                    <div className="w-24 h-24 bg-white shadow-sm rounded-full mx-auto mb-4 flex items-center justify-center text-3xl font-serif font-bold text-govt-blue border border-slate-100">
-                        {person.name.charAt(0)}
+        <div className="mb-20">
+            {/* Patrons Section */}
+            <h3 className="text-2xl font-bold text-govt-navy mb-8 text-center bg-slate-50 py-4 rounded-xl mx-auto max-w-3xl border border-slate-200">
+                Patrons
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
+                {PATRONS.map((person, idx) => (
+                    <div key={idx} className="bg-slate-50 p-6 rounded-2xl text-center border-b-4 border-govt-blue hover:shadow-lg transition-shadow">
+                        <div className="w-24 h-24 bg-white shadow-sm rounded-full mx-auto mb-4 flex items-center justify-center text-3xl font-serif font-bold text-govt-blue border border-slate-100">
+                            {person.name.charAt(0)}
+                        </div>
+                        <p className="text-xs font-bold text-govt-accent uppercase tracking-wider mb-2">Patron</p>
+                        <h3 className="text-lg font-bold text-govt-navy mb-2">{person.name}</h3>
+                        <p className="text-sm text-slate-600 leading-snug">{person.role}</p>
+                        <p className="text-xs text-slate-500 mt-2">{person.affiliation}</p>
                     </div>
-                    <p className="text-xs font-bold text-govt-accent uppercase tracking-wider mb-2">Patron</p>
-                    <h3 className="text-lg font-bold text-govt-navy mb-2">{person.name}</h3>
-                    <p className="text-sm text-slate-600 leading-snug">{person.role}</p>
-                    <p className="text-xs text-slate-500 mt-2">{person.affiliation}</p>
-                </div>
-            ))}
-             {CHAIRS.map((person, idx) => (
-                <div key={idx} className="bg-slate-50 p-6 rounded-2xl text-center border-b-4 border-govt-accent hover:shadow-lg transition-shadow">
-                     <div className="w-24 h-24 bg-white shadow-sm rounded-full mx-auto mb-4 flex items-center justify-center text-3xl font-serif font-bold text-govt-accent border border-slate-100">
-                        {person.name.charAt(0)}
+                ))}
+            </div>
+
+            {/* Conference Chairs Section */}
+            <h3 className="text-2xl font-bold text-govt-navy mb-8 text-center bg-slate-50 py-4 rounded-xl mx-auto max-w-3xl border border-slate-200">
+                Conference Chairs
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
+                {CHAIRS.map((person, idx) => (
+                    <div key={idx} className="bg-slate-50 p-6 rounded-2xl text-center border-b-4 border-govt-accent hover:shadow-lg transition-shadow">
+                        <div className="w-24 h-24 bg-white shadow-sm rounded-full mx-auto mb-4 flex items-center justify-center text-3xl font-serif font-bold text-govt-accent border border-slate-100">
+                            {person.name.charAt(0)}
+                        </div>
+                        <p className="text-xs font-bold text-govt-blue uppercase tracking-wider mb-2">Chair</p>
+                        <h3 className="text-lg font-bold text-govt-navy mb-2">{person.name}</h3>
+                        <p className="text-sm text-slate-600 leading-snug">{person.affiliation}</p>
+                        <a href={`mailto:${person.email}`} className="text-xs text-govt-blue mt-2 block hover:underline">{person.email}</a>
                     </div>
-                    <p className="text-xs font-bold text-govt-blue uppercase tracking-wider mb-2">Chair</p>
-                    <h3 className="text-lg font-bold text-govt-navy mb-2">{person.name}</h3>
-                    <p className="text-sm text-slate-600 leading-snug">{person.affiliation}</p>
-                    <a href={`mailto:${person.email}`} className="text-xs text-govt-blue mt-2 block hover:underline">{person.email}</a>
-                </div>
-            ))}
+                ))}
+            </div>
+
+            {/* Organizing Committee Section */}
+            <h3 className="text-2xl font-bold text-govt-navy mb-8 text-center bg-slate-50 py-4 rounded-xl mx-auto max-w-3xl border border-slate-200">
+                Organizing Committee
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
+                {ORGANIZING_COMMITTEE.map((person, idx) => {
+                    const isObject = typeof person === 'object' && person !== null;
+                    const personObj = isObject ? person as { name: string; affiliation: string; email?: string } : null;
+                    return (
+                        <div key={idx} className="bg-slate-50 p-6 rounded-2xl text-center border-b-4 border-govt-accent hover:shadow-lg transition-shadow">
+                            <div className="w-24 h-24 bg-white shadow-sm rounded-full mx-auto mb-4 flex items-center justify-center text-3xl font-serif font-bold text-govt-accent border border-slate-100">
+                                {typeof person === 'string' ? person.charAt(0) : personObj?.name.charAt(0)}
+                            </div>
+                            <p className="text-xs font-bold text-govt-blue uppercase tracking-wider mb-2">Chair</p>
+                            <h3 className="text-lg font-bold text-govt-navy mb-2">{typeof person === 'string' ? person : personObj?.name}</h3>
+                            <p className="text-sm text-slate-600 leading-snug">{typeof person === 'string' ? '' : personObj?.affiliation}</p>
+                            {personObj?.email && <a href={`mailto:${personObj.email}`} className="text-xs text-govt-blue mt-2 block hover:underline">{personObj.email}</a>}
+                        </div>
+                    );
+                })}
+            </div>
         </div>
 
         {/* Advisory Committee - Expandable List */}
@@ -78,21 +113,6 @@ const CommitteeSection: React.FC = () => {
                 </div>
             )}
         </div>
-
-        {/* Organizing Committee */}
-        {/* <div>
-            <h3 className="text-2xl font-bold text-govt-navy mb-8 text-center bg-slate-50 py-4 rounded-xl mx-auto max-w-3xl border border-slate-200">
-                Organizing Committee
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4">
-                {ORGANIZING_COMMITTEE.map((member, idx) => (
-                    <div key={idx} className="flex items-start gap-3 p-4 bg-white rounded-xl hover:bg-orange-50 transition-colors border border-slate-100 hover:border-orange-100 shadow-sm">
-                         <div className="mt-1.5 w-2 h-2 rounded-full bg-govt-accent flex-shrink-0"></div>
-                         <p className="text-sm text-slate-700 font-medium">{member}</p>
-                    </div>
-                ))}
-            </div>
-        </div> */}
       </div>
     </section>
   );
