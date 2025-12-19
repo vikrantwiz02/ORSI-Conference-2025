@@ -81,7 +81,7 @@ const Hero: React.FC = () => {
                         &
                     </p>
 
-                    <p className="text-sm md:text-base text-slate-500 mb-8 italic border-l-4 border-govt-accent pl-4 lg:ml-0 inline-block lg:block text-left bg-white/50 lg:bg-transparent p-2 lg:p-0 rounded lg:rounded-none">
+                    <p className="text-sm md:text-base text-slate-500 mb-8 italic border-l-4 border-govt-accent pl-4 lg:ml-0 inline-block lg:block text-left bg-white/50 lg:bg-transparent p-2 lg:p-0 rounded lg:rounded-none font-bold">
                          {CONFERENCE_DETAILS.subEvent}
                     </p>
 

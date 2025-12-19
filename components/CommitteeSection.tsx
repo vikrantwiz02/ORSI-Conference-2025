@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { PATRONS, CHAIRS, ADVISORY_COMMITTEE, ORGANIZING_COMMITTEE } from '../constants';
+import { PATRONS, CHAIRS, ADVISORY_COMMITTEE, ORGANIZING_COMMITTEE, ORSI_COUNCIL_MEMBERS } from '../constants';
 
 const CommitteeSection: React.FC = () => {
   const [showAllAdvisory, setShowAllAdvisory] = useState(false);
@@ -58,22 +58,29 @@ const CommitteeSection: React.FC = () => {
             <h3 className="text-2xl font-bold text-govt-navy mb-8 text-center bg-slate-50 py-4 rounded-xl mx-auto max-w-3xl border border-slate-200">
                 Organizing Committee
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
                 {ORGANIZING_COMMITTEE.map((person, idx) => {
-                    const isObject = typeof person === 'object' && person !== null;
-                    const personObj = isObject ? person as { name: string; affiliation: string; email?: string } : null;
+                    const parts = person.split(', ');
+                    const name = parts[0];
+                    const affiliation = parts.slice(1).join(', ');
                     return (
                         <div key={idx} className="bg-slate-50 p-6 rounded-2xl text-center border-b-4 border-govt-accent hover:shadow-lg transition-shadow">
                             <div className="w-24 h-24 bg-white shadow-sm rounded-full mx-auto mb-4 flex items-center justify-center text-3xl font-serif font-bold text-govt-accent border border-slate-100">
-                                {typeof person === 'string' ? person.charAt(0) : personObj?.name.charAt(0)}
+                                {name.charAt(0)}
                             </div>
-                            <p className="text-xs font-bold text-govt-blue uppercase tracking-wider mb-2">Chair</p>
-                            <h3 className="text-lg font-bold text-govt-navy mb-2">{typeof person === 'string' ? person : personObj?.name}</h3>
-                            <p className="text-sm text-slate-600 leading-snug">{typeof person === 'string' ? '' : personObj?.affiliation}</p>
-                            {personObj?.email && <a href={`mailto:${personObj.email}`} className="text-xs text-govt-blue mt-2 block hover:underline">{personObj.email}</a>}
+                            <h3 className="text-lg font-bold text-govt-navy mb-2">{name}</h3>
+                            <p className="text-sm text-slate-600 leading-snug">{affiliation}</p>
                         </div>
                     );
                 })}
+            </div>
+
+            {/* Speakers Section */}
+            <h3 className="text-2xl font-bold text-govt-navy mb-8 text-center bg-slate-50 py-4 rounded-xl mx-auto max-w-3xl border border-slate-200">
+                Speakers
+            </h3>
+            <div className="text-center mb-16 py-8">
+                <p className="text-2xl md:text-3xl font-serif italic text-slate-500">To be announced soon</p>
             </div>
         </div>
 
@@ -112,6 +119,26 @@ const CommitteeSection: React.FC = () => {
                     </button>
                 </div>
             )}
+        </div>
+
+        {/* ORSI Council Members */}
+        <div className="mb-20">
+            <h3 className="text-2xl font-bold text-govt-navy mb-8 text-center bg-slate-50 py-4 rounded-xl mx-auto max-w-3xl border border-slate-200">
+                ORSI Council Members
+            </h3>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4">
+                {ORSI_COUNCIL_MEMBERS.map((member, idx) => (
+                    member ? (
+                        <div key={idx} className="flex items-start gap-3 p-4 bg-white rounded-xl hover:bg-blue-50 transition-colors border border-slate-100 hover:border-blue-100 shadow-sm">
+                            <div className="mt-1.5 w-2 h-2 rounded-full bg-govt-blue flex-shrink-0"></div>
+                            <p className="text-sm text-slate-700 font-medium">{member}</p>
+                        </div>
+                    ) : (
+                        <div key={idx} className="invisible"></div>
+                    )
+                ))}
+            </div>
         </div>
       </div>
     </section>

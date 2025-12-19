@@ -7,7 +7,7 @@ export const CONFERENCE_DETAILS = {
   host: "Operational Research Society of India",
   venue: "Govt. Holkar Science College, Indore, Madhya Pradesh",
   date: "06-08 March 2026",
-  website: "https://orsi-2026.com",
+  website: "https://orsiconference.org/",
   email: "icaorfdi2026@gmail.com"
 };
 
@@ -114,6 +114,26 @@ export const ORGANIZING_COMMITTEE = [
   "Anil Patidar, Govt. Holkar Science College, Indore",
   "Naresh Patel, Govt. Holkar Science College, Indore",
   "Dr. Pradeep Joshi, IPS Indore"
+];
+
+export const ORSI_COUNCIL_MEMBERS = [
+  "Prof. Chandra Kant Jaggi",
+  "Prof. Bibhas Chandra Giri",
+  "Prof. Shiv Raj Singh Pundir",
+  "Prof. Samarjit Kar",
+  "Prof. R. N. Mukherjee",
+  "Dr. Bhikari Charan Pattanayak",
+  "Dr. Anupama Chanda Mitra",
+  "Dr. Rupak Bhattacharyya",
+  "Mr. Suprativ Saha",
+  "Dr. Chittaranjan Mallick",
+  "Dr. Dharmendra Yadav",
+  "Dr. Surbhi Singhal",
+  "Dr. Nabendu Sen",
+  "Dr. Jayanta Kumar Dey",
+  "Prof. Pankaj Dutta",
+  "",
+  "Dr. Anirban Saha"
 ];
 
 export const IMPORTANT_DATES = [

@@ -1,38 +1,30 @@
 import React from 'react';
-import { BuildingLibraryIcon, AcademicCapIcon } from './Icons';
 
 const PARTNERS = [
   {
     name: "Govt. Holkar Science College",
     role: "Host Institution",
     type: "Academic",
-    icon: <BuildingLibraryIcon className="w-10 h-10 text-govt-blue" />
+    logo: "/holkar_logo.png"
   },
   {
     name: "ORSI Indore Chapter",
     role: "Organizer",
     type: "Society",
-    icon: <AcademicCapIcon className="w-10 h-10 text-govt-accent" />
+    logo: "/orsi_logo.png"
   },
   {
-    name: "Springer Nature",
+    name: "OPSEARCH",
+    nameSecondary: "(Springer Nature)",
     role: "Publication Partner",
     type: "Journal",
-    icon: (
-      <svg className="w-10 h-10 text-slate-700" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M16.5 4c-1.7 0-3 1.3-3 3v10c0 1.7 1.3 3 3 3s3-1.3 3-3V7c0-1.7-1.3-3-3-3zm-9 0c-1.7 0-3 1.3-3 3v10c0 1.7 1.3 3 3 3s3-1.3 3-3V7c0-1.7-1.3-3-3-3z"/>
-      </svg>
-    )
+    logo: "/springer_logo.png"
   },
   {
     name: "Scopus",
     role: "Indexing Partner",
     type: "Database",
-    icon: (
-      <svg className="w-10 h-10 text-orange-600" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-      </svg>
-    )
+    logo: "/Scopus_logo.png"
   }
 ];
 
@@ -55,8 +47,12 @@ const SponsorsSection: React.FC = () => {
             >
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-slate-200 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
               
-              <div className="mb-6 p-5 bg-slate-50 rounded-2xl shadow-inner group-hover:scale-110 transition-transform duration-300">
-                {partner.icon}
+              <div className="mb-6 h-24 w-24 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <img 
+                  src={partner.logo} 
+                  alt={partner.name}
+                  className="max-h-full max-w-full object-contain"
+                />
               </div>
               <h4 className="text-lg font-bold text-govt-navy mb-1.5 group-hover:text-govt-blue transition-colors">
                 {partner.name}
