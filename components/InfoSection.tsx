@@ -7,9 +7,10 @@ interface InfoSectionProps {
   imageSrc: string;
   isReversed?: boolean;
   accentColor?: 'blue' | 'orange';
+  imageContain?: boolean;
 }
 
-const InfoSection: React.FC<InfoSectionProps> = ({ id, title, content, imageSrc, isReversed = false, accentColor = 'blue' }) => {
+const InfoSection: React.FC<InfoSectionProps> = ({ id, title, content, imageSrc, isReversed = false, accentColor = 'blue', imageContain = false }) => {
   const isBlue = accentColor === 'blue';
   
   return (
@@ -30,7 +31,7 @@ const InfoSection: React.FC<InfoSectionProps> = ({ id, title, content, imageSrc,
                     <img 
                         src={imageSrc} 
                         alt={title} 
-                        className="relative z-10 rounded-2xl shadow-xl w-full h-72 md:h-96 object-cover transform transition-transform duration-500 group-hover:-translate-y-2" 
+                        className={`relative z-10 rounded-2xl shadow-xl w-full h-72 md:h-96 transform transition-transform duration-500 group-hover:-translate-y-2 ${imageContain ? 'object-contain bg-white p-6' : 'object-cover'}`}
                     />
                 </div>
             </div>

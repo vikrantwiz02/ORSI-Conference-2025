@@ -55,9 +55,10 @@ export function App() {
             id="about-orsi"
             title="About ORSI"
             content={ABOUT_ORSI}
-            imageSrc="/college_image.jpg"
+            imageSrc="/orsi_logo.png"
             isReversed={true}
             accentColor="orange"
+            imageContain={true}
         />
 
         <ThemesSection />
