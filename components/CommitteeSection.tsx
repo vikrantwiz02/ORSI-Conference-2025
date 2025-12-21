@@ -6,6 +6,19 @@ const CommitteeSection: React.FC = () => {
   
   const displayedAdvisory = showAllAdvisory ? ADVISORY_COMMITTEE : ADVISORY_COMMITTEE.slice(0, 9);
 
+  // Helper function to get photo filename from name
+  const getPhotoUrl = (name: string) => {
+    const firstName = name.toLowerCase().split(' ')[0];
+    return `/${firstName}.jpg`;
+  };
+
+  // Check if image exists and show it, otherwise show initial
+  const [imageErrors, setImageErrors] = React.useState<Record<string, boolean>>({});
+  
+  const handleImageError = (name: string) => {
+    setImageErrors(prev => ({ ...prev, [name]: true }));
+  };
+
   return (
     <section id="committee" className="py-16 lg:py-24 bg-white border-t border-slate-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -25,8 +38,17 @@ const CommitteeSection: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
                 {PATRONS.map((person, idx) => (
                     <div key={idx} className="bg-slate-50 p-6 rounded-2xl text-center border-b-4 border-govt-blue hover:shadow-lg transition-shadow">
-                        <div className="w-24 h-24 bg-white shadow-sm rounded-full mx-auto mb-4 flex items-center justify-center text-3xl font-serif font-bold text-govt-blue border border-slate-100">
-                            {person.name.charAt(0)}
+                        <div className="w-24 h-24 bg-white shadow-sm rounded-full mx-auto mb-4 flex items-center justify-center text-3xl font-serif font-bold text-govt-blue border border-slate-100 overflow-hidden">
+                            {!imageErrors[person.name] ? (
+                                <img 
+                                    src={getPhotoUrl(person.name)} 
+                                    alt={person.name}
+                                    className="w-full h-full object-cover"
+                                    onError={() => handleImageError(person.name)}
+                                />
+                            ) : (
+                                person.name.charAt(0)
+                            )}
                         </div>
                         <p className="text-xs font-bold text-govt-accent uppercase tracking-wider mb-2">Patron</p>
                         <h3 className="text-lg font-bold text-govt-navy mb-2">{person.name}</h3>
@@ -43,8 +65,17 @@ const CommitteeSection: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
                 {CHAIRS.map((person, idx) => (
                     <div key={idx} className="bg-slate-50 p-6 rounded-2xl text-center border-b-4 border-govt-accent hover:shadow-lg transition-shadow">
-                        <div className="w-24 h-24 bg-white shadow-sm rounded-full mx-auto mb-4 flex items-center justify-center text-3xl font-serif font-bold text-govt-accent border border-slate-100">
-                            {person.name.charAt(0)}
+                        <div className="w-24 h-24 bg-white shadow-sm rounded-full mx-auto mb-4 flex items-center justify-center text-3xl font-serif font-bold text-govt-accent border border-slate-100 overflow-hidden">
+                            {!imageErrors[person.name] ? (
+                                <img 
+                                    src={getPhotoUrl(person.name)} 
+                                    alt={person.name}
+                                    className="w-full h-full object-cover"
+                                    onError={() => handleImageError(person.name)}
+                                />
+                            ) : (
+                                person.name.charAt(0)
+                            )}
                         </div>
                         <p className="text-xs font-bold text-govt-blue uppercase tracking-wider mb-2">Chair</p>
                         <h3 className="text-lg font-bold text-govt-navy mb-2">{person.name}</h3>
@@ -65,8 +96,17 @@ const CommitteeSection: React.FC = () => {
                     const affiliation = parts.slice(1).join(', ');
                     return (
                         <div key={idx} className="bg-slate-50 p-6 rounded-2xl text-center border-b-4 border-govt-accent hover:shadow-lg transition-shadow">
-                            <div className="w-24 h-24 bg-white shadow-sm rounded-full mx-auto mb-4 flex items-center justify-center text-3xl font-serif font-bold text-govt-accent border border-slate-100">
-                                {name.charAt(0)}
+                            <div className="w-24 h-24 bg-white shadow-sm rounded-full mx-auto mb-4 flex items-center justify-center text-3xl font-serif font-bold text-govt-accent border border-slate-100 overflow-hidden">
+                                {!imageErrors[name] ? (
+                                    <img 
+                                        src={getPhotoUrl(name)} 
+                                        alt={name}
+                                        className="w-full h-full object-cover"
+                                        onError={() => handleImageError(name)}
+                                    />
+                                ) : (
+                                    name.charAt(0)
+                                )}
                             </div>
                             <h3 className="text-lg font-bold text-govt-navy mb-2">{name}</h3>
                             <p className="text-sm text-slate-600 leading-snug">{affiliation}</p>
