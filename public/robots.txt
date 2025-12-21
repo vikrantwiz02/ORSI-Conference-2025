@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://orsiconference.org/sitemap.xml
+
+# Optimize crawl budget
+Crawl-delay: 0
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
