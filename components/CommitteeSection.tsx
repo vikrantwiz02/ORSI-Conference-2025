@@ -8,7 +8,9 @@ const CommitteeSection: React.FC = () => {
 
   // Helper function to get photo filename from name
   const getPhotoUrl = (name: string) => {
-    const firstName = name.toLowerCase().split(' ')[0];
+    const titles = ['dr.', 'prof.', 'mr.', 'ms.', 'mrs.'];
+    const parts = name.toLowerCase().split(' ');
+    const firstName = titles.includes(parts[0]) ? parts[1] : parts[0];
     return `/${firstName}.jpg`;
   };
 
