@@ -30,6 +30,62 @@ const RegistrationSection: React.FC = () => {
             ))}
         </div>
 
+        {/* Registration Guidelines */}
+        <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 mb-10">
+            <h3 className="text-xl font-bold text-govt-navy mb-4 flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-govt-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                Registration Guidelines
+            </h3>
+            <div className="space-y-3">
+                <div className="flex gap-3 text-sm text-slate-700 items-start">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-govt-blue text-white flex items-center justify-center text-xs font-bold">1</span>
+                    <p className="leading-relaxed pt-0.5">Complete the transaction according to the <strong className="text-govt-navy">fee mentioned for your specific category</strong>.</p>
+                </div>
+                <div className="flex gap-3 text-sm text-slate-700 items-start">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-govt-blue text-white flex items-center justify-center text-xs font-bold">2</span>
+                    <p className="leading-relaxed pt-0.5">
+                        After payment of the registration fee, <strong className="text-govt-navy">download and send the duly filled</strong> {' '}
+                        <a 
+                            href="/Conference_Registration_Form.pdf"
+                            download
+                            className="text-govt-blue hover:text-govt-accent font-bold underline transition-colors"
+                        >
+                            registration form
+                        </a>
+                        , to <strong className="text-govt-navy">Email</strong> {' '}
+                        <a 
+                            href={`mailto:${CONFERENCE_DETAILS.email}`}
+                            className="text-govt-blue hover:text-govt-accent font-bold underline transition-colors"
+                        >
+                            {CONFERENCE_DETAILS.email}
+                        </a>
+                    </p>
+                </div>
+                <div className="flex gap-3 text-sm text-slate-700 items-start">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-govt-blue text-white flex items-center justify-center text-xs font-bold">3</span>
+                    <p className="leading-relaxed pt-0.5">The registration fee includes <strong className="text-govt-navy">conference materials, breakfast, lunch, and snacks for all three days</strong> of the conference and is <strong className="text-red-600">non-refundable under any circumstances</strong>.</p>
+                </div>
+                <div className="flex gap-3 text-sm text-slate-700 items-start">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-govt-blue text-white flex items-center justify-center text-xs font-bold">4</span>
+                    <p className="leading-relaxed pt-0.5"><strong className="text-govt-navy">Limited shared accommodation</strong> in nearby hostels/guest houses is available for domestic and international participants on a <strong className="text-govt-navy">first-come, first-served basis</strong> at a nominal fee.</p>
+                </div>
+                <div className="flex gap-3 text-sm text-slate-700 items-start">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-govt-blue text-white flex items-center justify-center text-xs font-bold">5</span>
+                    <p className="leading-relaxed pt-0.5">
+                        For any <strong className="text-govt-navy">further conference-related queries</strong>, participants may contact the organizing committee at{' '}
+                        <a 
+                            href={`mailto:${CONFERENCE_DETAILS.email}`}
+                            className="text-govt-blue hover:text-govt-accent font-bold underline transition-colors"
+                        >
+                            {CONFERENCE_DETAILS.email}
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
         {/* 2. Main Content - Fees & Bank Details Row */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-6">
             
@@ -114,12 +170,26 @@ const RegistrationSection: React.FC = () => {
                          {GUIDELINES.map((line, idx) => (
                              <div key={idx} className="flex gap-3 text-sm text-slate-600 items-start">
                                 <span className="mt-1 w-1.5 h-1.5 rounded-full bg-govt-blue flex-shrink-0"></span>
-                                <span className="leading-snug">{line}</span>
+                                <span className="leading-snug">
+                                    {idx === 0 ? (
+                                        <>
+                                            {line}{' '}
+                                            <a 
+                                                href={`mailto:${CONFERENCE_DETAILS.email}`}
+                                                className="text-govt-blue hover:text-govt-accent font-semibold underline transition-colors"
+                                            >
+                                                {CONFERENCE_DETAILS.email}
+                                            </a>
+                                        </>
+                                    ) : (
+                                        line
+                                    )}
+                                </span>
                              </div>
                         ))}
-                         <div className="flex gap-3 text-sm text-orange-700 items-start md:col-span-2 mt-2 bg-orange-50 p-2 rounded-lg border border-orange-100">
-                                <span className="mt-1 w-1.5 h-1.5 rounded-full bg-orange-500 flex-shrink-0"></span>
-                                <span className="leading-snug"><strong>Note:</strong> Limited student accommodation available (first-come, first-served).</span>
+                         <div className="flex gap-3 text-sm text-slate-600 items-start md:col-span-2">
+                                <span className="mt-1 w-1.5 h-1.5 rounded-full bg-govt-blue flex-shrink-0"></span>
+                                <span className="leading-snug"><strong className="text-govt-navy">Best Paper Awards</strong> will be presented across broad thematic areas of the conference, including multiple award categories, based on the recommendations of the review committee.</span>
                          </div>
                     </div>
                 </div>

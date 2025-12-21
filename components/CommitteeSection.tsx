@@ -97,10 +97,6 @@ const CommitteeSection: React.FC = () => {
                     const affiliation = parts.slice(1).join(', ');
                     return (
                         <div key={idx} className="bg-slate-50 p-6 rounded-2xl text-center border-b-4 border-govt-blue hover:shadow-lg transition-shadow">
-                            <div className="w-24 h-24 bg-white shadow-sm rounded-full mx-auto mb-4 flex items-center justify-center text-3xl font-serif font-bold text-govt-blue border border-slate-100">
-                                {name.charAt(0)}
-                            </div>
-                            <p className="text-xs font-bold text-govt-accent uppercase tracking-wider mb-2">Advisory Member</p>
                             <h3 className="text-lg font-bold text-govt-navy mb-2">{name}</h3>
                             <p className="text-sm text-slate-600 leading-snug">{affiliation}</p>
                         </div>
@@ -140,10 +136,6 @@ const CommitteeSection: React.FC = () => {
                 {ORSI_COUNCIL_MEMBERS.map((member, idx) => (
                     member ? (
                         <div key={idx} className="bg-slate-50 p-6 rounded-2xl text-center border-b-4 border-govt-accent hover:shadow-lg transition-shadow">
-                            <div className="w-24 h-24 bg-white shadow-sm rounded-full mx-auto mb-4 flex items-center justify-center text-3xl font-serif font-bold text-govt-accent border border-slate-100">
-                                {member.charAt(0)}
-                            </div>
-                            <p className="text-xs font-bold text-govt-blue uppercase tracking-wider mb-2">Council Member</p>
                             <h3 className="text-lg font-bold text-govt-navy mb-2">{member}</h3>
                         </div>
                     ) : (
