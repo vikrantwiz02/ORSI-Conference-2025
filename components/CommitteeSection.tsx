@@ -45,6 +45,8 @@ const CommitteeSection: React.FC = () => {
                                 <img 
                                     src={getPhotoUrl(person.name)} 
                                     alt={person.name}
+                                    loading="lazy"
+                                    decoding="async"
                                     className="w-full h-full object-cover"
                                     onError={() => handleImageError(person.name)}
                                 />
@@ -72,6 +74,8 @@ const CommitteeSection: React.FC = () => {
                                 <img 
                                     src={getPhotoUrl(person.name)} 
                                     alt={person.name}
+                                    loading="lazy"
+                                    decoding="async"
                                     className="w-full h-full object-cover"
                                     onError={() => handleImageError(person.name)}
                                 />
@@ -103,6 +107,8 @@ const CommitteeSection: React.FC = () => {
                                     <img 
                                         src={getPhotoUrl(name)} 
                                         alt={name}
+                                        loading="lazy"
+                                        decoding="async"
                                         className="w-full h-full object-cover"
                                         onError={() => handleImageError(name)}
                                     />

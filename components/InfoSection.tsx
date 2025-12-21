@@ -31,6 +31,8 @@ const InfoSection: React.FC<InfoSectionProps> = ({ id, title, content, imageSrc,
                     <img 
                         src={imageSrc} 
                         alt={title} 
+                        loading="lazy"
+                        decoding="async"
                         className={`relative z-10 rounded-2xl shadow-xl w-full h-72 md:h-96 transform transition-transform duration-500 group-hover:-translate-y-2 ${imageContain ? 'object-contain bg-white p-6' : 'object-cover'}`}
                     />
                 </div>
