@@ -27,7 +27,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://orsiconference.org/" />
     <meta property="og:site_name" content="ICAORFDI 2026 - ORSI Conference" />
-    <meta property="og:title" content="ICAORFDI 2026 | International Conference on Operations Research | ORSI Convention 2026" />
+    <meta property="og:title" content="ICAORFDI 2026 | International Conference on Operations Research | ORSI Convention 2025" />
     <meta property="og:description" content="Join ICAORFDI 2026 at Govt. Holkar Science College, Indore. International Conference on Applications of Operations Research in Finance, Defence, and Industry. 58th Annual ORSI Convention. March 6-8, 2026. Submit papers, network with OR experts." />
     <meta property="og:image" content="https://orsiconference.org/college_image.jpg" />
     <meta property="og:image:width" content="1200" />
@@ -117,10 +117,13 @@
       }
     </script>
     <style>
+      /* Critical CSS */
       body {
         font-family: 'Inter', sans-serif;
         background-color: #f8fafc;
         color: #334155;
+        margin: 0;
+        padding: 0;
       }
       h1, h2, h3, h4, h5, h6 {
         font-family: 'Merriweather', serif;
@@ -128,6 +131,10 @@
       .glass-nav {
         background: rgba(255, 255, 255, 0.9);
         backdrop-filter: blur(10px);
+      }
+      /* Prevent layout shifts */
+      #root {
+        min-height: 100vh;
       }
     </style>
   <script type="importmap">
@@ -140,6 +147,7 @@
 }
 </script>
 <link rel="stylesheet" href="/index.css">
+<link rel="preload" href="/college_image.jpg" as="image" type="image/jpeg">
 </head>
   <body>
     <div id="root"></div>

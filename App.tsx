@@ -1,20 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, lazy, Suspense } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import InfoSection from './components/InfoSection';
-import ThemesSection from './components/ThemesSection';
-import CommitteeSection from './components/CommitteeSection';
-import RegistrationSection from './components/RegistrationSection';
-import FAQSection from './components/FAQSection';
-import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
-import SponsorsSection from './components/SponsorsSection';
-import ContactSection from './components/ContactSection';
-import TermsOfServicePage from './components/TermsOfServiceSection';
-import PrivacyPolicyPage from './components/PrivacyPolicySection';
 import { Analytics } from "@vercel/analytics/react"
 import { MapPinIcon } from './components/Icons';
 import { ABOUT_COLLEGE, ABOUT_ORSI } from './constants';
+
+// Lazy load heavy components
+const ThemesSection = lazy(() => import('./components/ThemesSection'));
+const CommitteeSection = lazy(() => import('./components/CommitteeSection'));
+const RegistrationSection = lazy(() => import('./components/RegistrationSection'));
+const FAQSection = lazy(() => import('./components/FAQSection'));
+const SponsorsSection = lazy(() => import('./components/SponsorsSection'));
+const ContactSection = lazy(() => import('./components/ContactSection'));
+const Footer = lazy(() => import('./components/Footer'));
+const TermsOfServicePage = lazy(() => import('./components/TermsOfServiceSection'));
+const PrivacyPolicyPage = lazy(() => import('./components/PrivacyPolicySection'));
 
 export function App() {
   const [currentPage, setCurrentPage] = useState<'home' | 'terms' | 'privacy'>('home');
@@ -28,11 +30,19 @@ export function App() {
   };
 
   if (currentPage === 'terms') {
-    return <TermsOfServicePage onClose={handleBackToHome} onPrivacyClick={() => handleNavigate('privacy')} />;
+    return (
+      <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-govt-blue"></div></div>}>
+        <TermsOfServicePage onClose={handleBackToHome} onPrivacyClick={() => handleNavigate('privacy')} />
+      </Suspense>
+    );
   }
 
   if (currentPage === 'privacy') {
-    return <PrivacyPolicyPage onClose={handleBackToHome} />;
+    return (
+      <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-govt-blue"></div></div>}>
+        <PrivacyPolicyPage onClose={handleBackToHome} />
+      </Suspense>
+    );
   }
 
   return (
@@ -41,7 +51,9 @@ export function App() {
       <main>
         <Hero />
         
-        <SponsorsSection />
+        <Suspense fallback={<div className="py-16 text-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-govt-blue mx-auto"></div></div>}>
+          <SponsorsSection />
+        </Suspense>
 
         <InfoSection 
             id="about-college"
@@ -61,13 +73,21 @@ export function App() {
             imageContain={true}
         />
 
-        <ThemesSection />
+        <Suspense fallback={<div className="py-16 text-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-govt-blue mx-auto"></div></div>}>
+          <ThemesSection />
+        </Suspense>
         
-        <RegistrationSection />
+        <Suspense fallback={<div className="py-16 text-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-govt-blue mx-auto"></div></div>}>
+          <RegistrationSection />
+        </Suspense>
 
-        <CommitteeSection />
+        <Suspense fallback={<div className="py-16 text-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-govt-blue mx-auto"></div></div>}>
+          <CommitteeSection />
+        </Suspense>
 
-        <FAQSection />
+        <Suspense fallback={<div className="py-16 text-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-govt-blue mx-auto"></div></div>}>
+          <FAQSection />
+        </Suspense>
 
         {/* Professional Venue Section with Precise Native Pinned Map */}
         <section id="venue" className="relative bg-white pt-24 pb-20 overflow-hidden border-t border-slate-100">
@@ -100,9 +120,13 @@ export function App() {
         </section>
 
 
-        <ContactSection />
+        <Suspense fallback={<div className="py-16 text-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-govt-blue mx-auto"></div></div>}>
+          <ContactSection />
+        </Suspense>
       </main>
-      <Footer onNavigate={handleNavigate} />
+      <Suspense fallback={<div className="py-8 bg-govt-navy"></div>}>
+        <Footer onNavigate={handleNavigate} />
+      </Suspense>
       <ScrollToTop />
       <Analytics />
     </div>

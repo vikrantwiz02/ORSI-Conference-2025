@@ -34,6 +34,11 @@ export default defineConfig(({ mode }) => {
           compress: {
             drop_console: true,
             drop_debugger: true,
+            pure_funcs: ['console.log', 'console.info'],
+            passes: 2,
+          },
+          mangle: {
+            safari10: true,
           },
         },
         rollupOptions: {
@@ -41,10 +46,16 @@ export default defineConfig(({ mode }) => {
             manualChunks: {
               vendor: ['react', 'react-dom'],
             },
+            assetFileNames: 'assets/[name]-[hash][extname]',
+            chunkFileNames: 'assets/[name]-[hash].js',
+            entryFileNames: 'assets/[name]-[hash].js',
           },
         },
         cssCodeSplit: true,
+        cssMinify: true,
         chunkSizeWarningLimit: 1000,
+        assetsInlineLimit: 4096,
+        reportCompressedSize: false,
       },
     };
 });
