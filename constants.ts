@@ -2,7 +2,7 @@
 export const CONFERENCE_DETAILS = {
   titleMain: "International Conference on Applications of Operations Research in Finance, Defence, and Industry",
   acronym: "ICAORFDI-2026",
-  subEvent: "58th Annual Convention of Operational Research Society of India (ORSI-2026)",
+  subEvent: "58th Annual Convention of Operational Research Society of India (ORSI-2025)",
   organizer: "ORSI Indore Chapter",
   host: "Operational Research Society of India",
   venue: "Govt. Holkar Science College, Indore, Madhya Pradesh",
