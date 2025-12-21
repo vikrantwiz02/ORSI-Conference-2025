@@ -108,7 +108,7 @@ export const ADVISORY_COMMITTEE = [
 ];
 
 export const ORGANIZING_COMMITTEE = [
-  "Nagesh Deogkar, Govt. Holkar Science College, Indore",
+  "Nagesh Dagaonkar, Govt. Holkar Science College, Indore",
   "Hemraj Singh Dager, Govt. Holkar Science College, Indore",
   "Vandana, Indian Institute of Management, Sirmaur, Himachal Pradesh, India",
   "Anil Patidar, Govt. Holkar Science College, Indore",
