@@ -82,7 +82,7 @@ const CommitteeSection: React.FC = () => {
                         <p className="text-xs font-bold text-govt-blue uppercase tracking-wider mb-2">Chair</p>
                         <h3 className="text-lg font-bold text-govt-navy mb-2">{person.name}</h3>
                         <p className="text-sm text-slate-600 leading-snug">{person.affiliation}</p>
-                        <a href={`mailto:${person.email}`} className="text-xs text-govt-blue mt-2 block hover:underline">{person.email}</a>
+                        {/* <a href={`mailto:${person.email}`} className="text-xs text-govt-blue mt-2 block hover:underline">{person.email}</a> */}
                     </div>
                 ))}
             </div>

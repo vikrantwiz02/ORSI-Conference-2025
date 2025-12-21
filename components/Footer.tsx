@@ -46,11 +46,16 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 <span className="absolute bottom-0 left-0 w-1/2 h-0.5 bg-govt-accent"></span>
             </h4>
             <ul className="space-y-3">
-                {['Home', 'About College', 'About ORSI', 'Registration'].map((item) => (
-                    <li key={item}>
-                        <a href={`#${item.toLowerCase().replace(' ', '-')}`} className="group flex items-center gap-2 hover:text-white transition-colors">
+                {[
+                    { label: 'Home', href: '#home' },
+                    { label: 'About College', href: '#about-college' },
+                    { label: 'About ORSI', href: '#about-orsi' },
+                    { label: 'Registration', href: '#register' }
+                ].map((item) => (
+                    <li key={item.label}>
+                        <a href={item.href} className="group flex items-center gap-2 hover:text-white transition-colors">
                             <span className="w-1.5 h-1.5 rounded-full bg-slate-600 group-hover:bg-govt-blue transition-colors"></span>
-                            {item}
+                            {item.label}
                         </a>
                     </li>
                 ))}
