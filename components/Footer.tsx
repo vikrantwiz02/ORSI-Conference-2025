@@ -87,7 +87,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
         <div className="border-t border-slate-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
             <p>© {new Date().getFullYear()} Govt. Holkar Science College. All rights reserved.</p>
-            <div className="flex gap-6 mt-4 md:mt-0">
+            <div className="flex gap-6 mt-4 md:mt-0 items-center">
                 <button 
                   onClick={() => onNavigate?.('privacy')} 
                   className="hover:text-white transition-colors cursor-pointer"
@@ -100,6 +100,19 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 >
                   Terms of Service
                 </button>
+                <span className="hidden md:inline text-slate-600">•</span>
+                <a 
+                  href="https://vikrant-portfolio-kappa.vercel.app/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-1.5 hover:text-govt-accent transition-colors"
+                >
+                  <span className="text-slate-500">Crafted by</span>
+                  <span className="font-semibold text-white group-hover:text-govt-accent">Vikrant</span>
+                  <svg className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </a>
             </div>
         </div>
       </div>
