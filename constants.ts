@@ -83,25 +83,35 @@ export const CHAIRS = [
 export const ADVISORY_COMMITTEE = [
   "Amit Kumar Bardhan, University of Delhi, India",
   "Anand Chandra, Executive Director, Aryatech Platforms Private Limited Noida, India",
+  "Angappa Gunasekaran, Director, School of Business Administration Penn State Harrisburg, Middletown, PA 17057, USA",
   "Adrijit Goswami, Indian Institute of Technology Kharagpur, India",
   "Alexandre Dolgui, IMT Atlantique, LS2N-CNRS, France",
   "Aquil Ahmed, Aligarh Muslim University, India",
   "Bhavin J Shah, Indian Institute of Management Indore, India",
+  "Bibhas Chandra Giri, Jadavpur University, Kolkata, India",
   "Bipan Hazarika, Gauhati University, India",
   "Chandra Shekhar, BITS Pilani, Pilani Campus, India",
+  "Chinedu Nwaigwe, Rivers State University, Port Harcourt, Nigeria",
   "Christoph H. Glock, Technische Universität Darmstadt, Germany",
+  "Dhirendra Bahuguna, Indian Institute of Technology Kanpur, India",
   "Gurprit S Gulati, Entrepreneur, Investor and Founder (Umbrella Infocare), India",
   "Hui Ming Wee, Chung Yuan Christian University Taiwan Chungli, Taiwan",
   "I. V. Murlikrishna, Jawaharlal Nehru Tech University, Hyderabad, India",
   "J P Singh Joorel, University of Jammu, India",
+  "Kalyan Chakraborty, SRM University, Andhra Pradesh, India",
   "Konstantina Skouri, University of Ioannina, Ioannina, Greece",
   "Manoj Kapoor, CEO and President, enGen Global Hyderabad, India",
   "Mark Goh, National University of Singapore, Singapore",
   "M. Kuber Singh, D. M. College of Science, D. M. University, Imphal, India",
+  "M. Mathirajan, Indian Institute of Science, Bangalore, India",
   "Nita H Shah, Gujarat University, India",
   "Pramod Kumar Jain, Director General, IITRAM, India",
-  "Pinkimani Goswami, University of Science and Technology, Meghalaya, India",
+  "Ram N. Mohapatra, Retired Professor, University of Central Florida, Orlando, USA",
+  "R. N. Mukherjee, Hon. Treasurer, ORSI Council",
+  // "Pinkimani Goswami, University of Science and Technology, Meghalaya, India",
   "Sachin Kumar Mangla, O P Jindal Global University, Haryana, India",
+  "Samarjit Kar, National Institute of Technology, Durgapur, India",
+  "Shiv Raj Singh, CCS University, Meerut, India",
   "Snigdha Banerjee, Devi Ahilya University, Indore, India",
   "Vijay Kumar Varshney, Head of Technology, MESA, Smollan, India",
   "V. S. S. Yadavalli, University of Pretoria, Pretoria, South Africa"
@@ -113,7 +123,7 @@ export const ORGANIZING_COMMITTEE = [
   "Vandana, Indian Institute of Management, Sirmaur, Himachal Pradesh, India",
   "Anil Patidar, Govt. Holkar Science College, Indore",
   "Naresh Patel, Govt. Holkar Science College, Indore",
-  "Dr. Pradeep Joshi, IPS Indore"
+  "Pradeep Joshi, IPS Indore"
 ];
 
 export const ORSI_COUNCIL_MEMBERS = [
