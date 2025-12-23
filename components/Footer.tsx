@@ -102,12 +102,12 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 </button>
                 <span className="hidden md:inline text-slate-600">•</span>
                 <a 
-                  href="https://vikrant-portfolio-kappa.vercel.app/" 
+                  href="https://vikrant-k.vercel.app/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="group flex items-center gap-1.5 hover:text-govt-accent transition-colors"
                 >
-                  <span className="text-slate-500">Crafted by</span>
+                  <span className="text-slate-500">Developed by</span>
                   <span className="font-semibold text-white group-hover:text-govt-accent">Vikrant</span>
                   <svg className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
