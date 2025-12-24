@@ -19,8 +19,8 @@ export const NAV_ITEMS = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about-college" },
   { label: "Themes", href: "#themes" },
+  { label: "Registration", href: "#register" },
   { label: "Committee", href: "#committee" },
-  { label: "Dates", href: "#dates" },
   { label: "Venue", href: "#venue" },
   { label: "Contact", href: "#contact" },
 ];

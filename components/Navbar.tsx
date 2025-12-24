@@ -16,6 +16,8 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigateHome }) => {
       const sections = NAV_ITEMS.map(item => item.href.replace('#', ''));
       const scrollPosition = window.scrollY + 150;
       
+      let currentSection = 'home';
+      
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
@@ -23,11 +25,12 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigateHome }) => {
           const offsetBottom = offsetTop + element.offsetHeight;
           
           if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
-            setActiveSection(section);
-            break;
+            currentSection = section;
           }
         }
       }
+      
+      setActiveSection(currentSection);
     };
     
     window.addEventListener('scroll', handleScroll);
