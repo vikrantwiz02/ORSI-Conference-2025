@@ -84,6 +84,7 @@ export const ADVISORY_COMMITTEE = [
   "Amit Kumar Bardhan, University of Delhi, India",
   "Anand Chandra, Executive Director, Aryatech Platforms Private Limited Noida, India",
   "Angappa Gunasekaran, Director, School of Business Administration Penn State Harrisburg, Middletown, PA 17057, USA",
+  "Anjana Gupta, Department of Applied Mathematics, Delhi Technological University, Delhi, India",
   "Adrijit Goswami, Indian Institute of Technology Kharagpur, India",
   "Alexandre Dolgui, IMT Atlantique, LS2N-CNRS, France",
   "Aquil Ahmed, Aligarh Muslim University, India",
