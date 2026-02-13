@@ -148,9 +148,9 @@ export const ORSI_COUNCIL_MEMBERS = [
 ];
 
 export const IMPORTANT_DATES = [
-  { label: "Last date for extended abstract submission", date: "10/02/2026" },
-  { label: "Notification for Acceptance of Abstracts", date: "12/02/2026" },
-  { label: "Last date for Early Bird Registration", date: "20/02/2026" },
+  { label: "Last date for extended abstract submission", date: "22/02/2026" },
+  { label: "Notification for Acceptance of Abstracts", date: "24/02/2026" },
+  { label: "Last date for Early Bird Registration", date: "25/02/2026" },
   { label: "Last date for full paper submission", date: "28/02/2026" }
 ];
 
