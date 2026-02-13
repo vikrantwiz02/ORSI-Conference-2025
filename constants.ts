@@ -207,7 +207,7 @@ export const FAQS = [
   },
   {
     question: "What is the deadline for abstract submission?",
-    answer: "The last date for extended abstract submission is 10th February 2026. Acceptance notifications will be sent by 12th February 2026."
+    answer: "The last date for extended abstract submission is 22nd February 2026. Acceptance notifications will be sent by 23rd February 2026."
   },
   {
     question: "Will the conference proceedings be published?",
