@@ -20,9 +20,29 @@ export const NAV_ITEMS = [
   { label: "About", href: "#about-college" },
   { label: "Themes", href: "#themes" },
   { label: "Registration", href: "#register" },
+  { label: "Awards", href: "#awards" },
   { label: "Committee", href: "#committee" },
   { label: "Venue", href: "#venue" },
   { label: "Contact", href: "#contact" },
+];
+
+export const AWARDS = [
+  {
+    name: "M N Gopalan Award for Best Ph.D. Thesis in O.R.",
+    description: "Recognizing outstanding doctoral research in the field of Operations Research"
+  },
+  {
+    name: "N.K. Jaiswal Memorial Award for Best Theoretical Paper",
+    description: "Honoring excellence in theoretical contributions to Operations Research"
+  },
+  {
+    name: "B.G. Raghavendra Memorial Award for Best Application Paper",
+    description: "Celebrating impactful applications of Operations Research in real-world scenarios"
+  },
+  {
+    name: "B.G. Raghavendra Memorial Award for Best Student Paper",
+    description: "Encouraging and recognizing exceptional research by students"
+  }
 ];
 
 export const THEMES = [
@@ -148,9 +168,9 @@ export const ORSI_COUNCIL_MEMBERS = [
 ];
 
 export const IMPORTANT_DATES = [
-  { label: "Last date for extended abstract submission", date: "22/02/2026" },
-  { label: "Notification for Acceptance of Abstracts", date: "24/02/2026" },
-  { label: "Last date for Early Bird Registration", date: "25/02/2026" },
+  { label: "Last date for extended abstract submission", date: "22/02/2026", oldDate: "10/02/2026" },
+  { label: "Notification for Acceptance of Abstracts", date: "23/02/2026", oldDate: "12/02/2026" },
+  { label: "Last date for Early Bird Registration", date: "25/02/2026", oldDate: "20/02/2026" },
   { label: "Last date for full paper submission", date: "28/02/2026" }
 ];
 

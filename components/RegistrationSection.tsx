@@ -24,7 +24,14 @@ const RegistrationSection: React.FC = () => {
             {IMPORTANT_DATES.map((item, idx) => (
                 <div key={idx} className="bg-white rounded-xl p-4 shadow-sm border border-slate-100 border-t-4 border-t-govt-blue hover:shadow-md transition-all">
                     <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Step {idx + 1}</div>
-                    <div className="text-lg font-mono font-bold text-govt-navy mb-1">{item.date}</div>
+                    <div className="text-lg font-mono font-bold text-govt-navy mb-1">
+                        {item.date}
+                        {item.oldDate && (
+                            <div className="text-sm text-red-500 line-through font-normal mt-0.5">
+                                {item.oldDate}
+                            </div>
+                        )}
+                    </div>
                     <div className="text-xs text-slate-600 font-medium leading-tight">{item.label}</div>
                 </div>
             ))}

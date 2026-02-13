@@ -11,6 +11,7 @@ import { ABOUT_COLLEGE, ABOUT_ORSI } from './constants';
 const ThemesSection = lazy(() => import('./components/ThemesSection'));
 const CommitteeSection = lazy(() => import('./components/CommitteeSection'));
 const RegistrationSection = lazy(() => import('./components/RegistrationSection'));
+const AwardsSection = lazy(() => import('./components/AwardsSection'));
 const FAQSection = lazy(() => import('./components/FAQSection'));
 const SponsorsSection = lazy(() => import('./components/SponsorsSection'));
 const ContactSection = lazy(() => import('./components/ContactSection'));
@@ -79,6 +80,10 @@ export function App() {
         
         <Suspense fallback={<div className="py-16 text-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-govt-blue mx-auto"></div></div>}>
           <RegistrationSection />
+        </Suspense>
+
+        <Suspense fallback={<div className="py-16 text-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-govt-blue mx-auto"></div></div>}>
+          <AwardsSection />
         </Suspense>
 
         <Suspense fallback={<div className="py-16 text-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-govt-blue mx-auto"></div></div>}>
