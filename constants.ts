@@ -166,7 +166,13 @@ export const SPEAKERS = [
     post: "",
     institution: "University of Ioannina",
     location: "Ioannina, Greece"
-  }
+  },
+  {
+    name: "Prof. Samarjit Kar",
+    post: "",
+    institution: "National Institute of Technology",
+    location: "Durgapur, India"
+  },
 ];
 
 export const ADVISORY_COMMITTEE = [
