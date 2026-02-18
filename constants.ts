@@ -129,8 +129,8 @@ export const SPEAKERS = [
   // Indian Speakers
   {
     name: "Mr. Vijay Kumar Varshney",
-    post: "Head of Technology",
-    institution: "MESA, Smollan",
+    post: "Co-founder & CTO",
+    institution: "NextG Apex India Private Limited",
     location: "India"
   },
   {
