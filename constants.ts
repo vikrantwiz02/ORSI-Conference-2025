@@ -120,6 +120,12 @@ export const SPEAKERS = [
     institution: "University of Ioannina",
     location: "Ioannina, Greece"
   },
+  {
+    name: "Prof. Sardar M. N. Islam",
+    post: "",
+    institution: "Victoria University",
+    location: "Melbourne, Australia"
+  },
   // Indian Speakers
   {
     name: "Mr. Vijay Kumar Varshney",
