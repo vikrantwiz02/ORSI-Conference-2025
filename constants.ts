@@ -101,6 +101,7 @@ export const CHAIRS = [
 ];
 
 export const SPEAKERS = [
+  // International Speakers
   {
     name: "Prof. Hui Ming Wee",
     post: "Department of Industrial & Systems Engineering",
@@ -113,6 +114,13 @@ export const SPEAKERS = [
     institution: "National University of Singapore",
     location: "Singapore"
   },
+  {
+    name: "Prof. Konstantina Skouri",
+    post: "",
+    institution: "University of Ioannina",
+    location: "Ioannina, Greece"
+  },
+  // Indian Speakers
   {
     name: "Mr. Vijay Kumar Varshney",
     post: "Head of Technology",
@@ -160,12 +168,6 @@ export const SPEAKERS = [
     post: "Department of Mathematics",
     institution: "BITS Pilani, Pilani Campus",
     location: "India"
-  },
-  {
-    name: "Prof. Konstantina Skouri",
-    post: "",
-    institution: "University of Ioannina",
-    location: "Ioannina, Greece"
   },
   {
     name: "Prof. Samarjit Kar",
