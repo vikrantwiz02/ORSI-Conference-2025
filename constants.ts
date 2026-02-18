@@ -100,42 +100,110 @@ export const CHAIRS = [
   }
 ];
 
+export const SPEAKERS = [
+  {
+    name: "Prof. Hui Ming Wee",
+    post: "Department of Industrial & Systems Engineering",
+    institution: "Chung Yuan Christian University Taiwan",
+    location: "Chungli, 32023, Taiwan"
+  },
+  {
+    name: "Prof. Mark Goh",
+    post: "NUS Business School and The Logistics Institute-Asia Pacific",
+    institution: "National University of Singapore",
+    location: "Singapore"
+  },
+  {
+    name: "Mr. Vijay Kumar Varshney",
+    post: "Head of Technology",
+    institution: "MESA, Smollan",
+    location: "India"
+  },
+  {
+    name: "Prof. Bhavin J Shah",
+    post: "Department of Operations Management and Quantitative Techniques",
+    institution: "Indian Institute of Management Indore",
+    location: "Indore, Madhya Pradesh, India"
+  },
+  {
+    name: "Prof. Adrijit Goswami",
+    post: "Department of Mathematics",
+    institution: "Indian Institute of Technology Kharagpur",
+    location: "Kharagpur, India"
+  },
+  {
+    name: "Prof. Nita H Shah",
+    post: "Department of Mathematics",
+    institution: "Gujarat University",
+    location: "Ahmedabad, Gujarat, India"
+  },
+  {
+    name: "Prof. Sachin Kumar Mangla",
+    post: "Research Centre - Digital Circular Economy for Sustainable Development Goals, Jindal Global Business School",
+    institution: "O P Jindal Global University",
+    location: "Sonipat, Haryana, India"
+  },
+  {
+    name: "Prof. Aquil Ahmed",
+    post: "Department of Statistics & Operations Research",
+    institution: "Aligarh Muslim University",
+    location: "Aligarh, India"
+  },
+  {
+    name: "Mr. Manoj Kapoor",
+    post: "CEO and President",
+    institution: "enGen Global",
+    location: "Hyderabad, India"
+  },
+  {
+    name: "Prof. Chandra Shekhar",
+    post: "Department of Mathematics",
+    institution: "BITS Pilani, Pilani Campus",
+    location: "India"
+  },
+  {
+    name: "Prof. Konstantina Skouri",
+    post: "",
+    institution: "University of Ioannina",
+    location: "Ioannina, Greece"
+  }
+];
+
 export const ADVISORY_COMMITTEE = [
-  "Adrijit Goswami, Indian Institute of Technology Kharagpur, India",
-  "Alexandre Dolgui, IMT Atlantique, LS2N-CNRS, France",
-  "Amit Kumar Bardhan, University of Delhi, India",
-  "Anand Chandra, Executive Director, Aryatech Platforms Private Limited Noida, India",
-  "Angappa Gunasekaran, Director, School of Business Administration Penn State Harrisburg, Middletown, PA 17057, USA",
-  "Anjana Gupta, Department of Applied Mathematics, Delhi Technological University, Delhi, India",
-  "Aquil Ahmed, Aligarh Muslim University, India",
-  "Bhavin J Shah, Indian Institute of Management Indore, India",
-  "Bibhas Chandra Giri, Jadavpur University, Kolkata, India",
-  "Bipan Hazarika, Gauhati University, India",
-  "Chandra Shekhar, BITS Pilani, Pilani Campus, India",
-  "Chinedu Nwaigwe, Rivers State University, Port Harcourt, Nigeria",
-  "Christoph H. Glock, Technische Universität Darmstadt, Germany",
-  "Dhirendra Bahuguna, Indian Institute of Technology Kanpur, India",
-  "Gurprit S Gulati, Entrepreneur, Investor and Founder (Umbrella Infocare), India",
-  "Hui Ming Wee, Chung Yuan Christian University Taiwan Chungli, Taiwan",
-  "I. V. Murlikrishna, Jawaharlal Nehru Tech University, Hyderabad, India",
-  "J P Singh Joorel, University of Jammu, India",
-  "Kalyan Chakraborty, SRM University, Andhra Pradesh, India",
-  "Konstantina Skouri, University of Ioannina, Ioannina, Greece",
-  "Manoj Kapoor, CEO and President, enGen Global Hyderabad, India",
-  "Mark Goh, National University of Singapore, Singapore",
-  "M. Kuber Singh, D. M. College of Science, D. M. University, Imphal, India",
-  "M. Mathirajan, Indian Institute of Science, Bangalore, India",
-  "Nita H Shah, Gujarat University, India",
-  "Pramod Kumar Jain, Director General, IITRAM, India",
-  "Ram N. Mohapatra, Retired Professor, University of Central Florida, Orlando, USA",
-  "R. N. Mukherjee, Hon. Treasurer, ORSI Council",
-  // "Pinkimani Goswami, University of Science and Technology, Meghalaya, India",
-  "Sachin Kumar Mangla, O P Jindal Global University, Haryana, India",
-  "Samarjit Kar, National Institute of Technology, Durgapur, India",
-  "Shiv Raj Singh, CCS University, Meerut, India",
-  "Snigdha Banerjee, Devi Ahilya University, Indore, India",
-  "Vijay Kumar Varshney, Head of Technology, MESA, Smollan, India",
-  "V. S. S. Yadavalli, University of Pretoria, Pretoria, South Africa"
+  { name: "Adrijit Goswami", institution: "Indian Institute of Technology Kharagpur", location: "India" },
+  { name: "Alexandre Dolgui", post: "", institution: "IMT Atlantique, LS2N-CNRS", location: "France" },
+  { name: "Amit Kumar Bardhan", post: "", institution: "University of Delhi", location: "India" },
+  { name: "Anand Chandra", post: "Executive Director", institution: "Aryatech Platforms Private Limited", location: "Noida, India" },
+  { name: "Angappa Gunasekaran", post: "Director, School of Business Administration", institution: "Penn State Harrisburg", location: "Middletown, PA, USA" },
+  { name: "Anjana Gupta", post: "Department of Applied Mathematics", institution: "Delhi Technological University", location: "Delhi, India" },
+  { name: "Aquil Ahmed", post: "", institution: "Aligarh Muslim University", location: "India" },
+  { name: "Bhavin J Shah", post: "", institution: "Indian Institute of Management Indore", location: "India" },
+  { name: "Bibhas Chandra Giri", post: "", institution: "Jadavpur University", location: "Kolkata, India" },
+  { name: "Bipan Hazarika", post: "", institution: "Gauhati University", location: "India" },
+  { name: "Chandra Shekhar", institution: "BITS Pilani, Pilani Campus", location: "India" },
+  { name: "Chinedu Nwaigwe", post: "", institution: "Rivers State University", location: "Port Harcourt, Nigeria" },
+  { name: "Christoph H. Glock", post: "", institution: "Technische Universität Darmstadt", location: "Germany" },
+  { name: "Dhirendra Bahuguna", post: "", institution: "Indian Institute of Technology Kanpur", location: "Kanpur, India" },
+  { name: "Gurprit S Gulati", post: "Entrepreneur, Investor and Founder", institution: "Umbrella Infocare", location: "India" },
+  { name: "Hui Ming Wee", post: "", institution: "Chung Yuan Christian University", location: "Chungli, Taiwan" },
+  { name: "I. V. Murlikrishna", post: "", institution: "Jawaharlal Nehru Tech University", location: "Hyderabad, India" },
+  { name: "J P Singh Joorel", post: "", institution: "University of Jammu", location: "India" },
+  { name: "Kalyan Chakraborty", post: "", institution: "SRM University", location: "Andhra Pradesh, India" },
+  { name: "Konstantina Skouri", post: "", institution: "University of Ioannina", location: "Ioannina, Greece" },
+  { name: "Manoj Kapoor", post: "CEO and President", institution: "enGen Global", location: "Hyderabad, India" },
+  { name: "Mark Goh", post: "", institution: "National University of Singapore", location: "Singapore" },
+  { name: "M. Kuber Singh", post: "", institution: "D. M. College of Science, D. M. University", location: "Imphal, India" },
+  { name: "M. Mathirajan", post: "", institution: "Indian Institute of Science", location: "Bangalore, India" },
+  { name: "Nita H Shah", institution: "Gujarat University", location: "India" },
+  { name: "Pramod Kumar Jain", post: "Director General", institution: "IITRAM", location: "India" },
+  { name: "Ram N. Mohapatra", post: "Retired Professor", institution: "University of Central Florida", location: "Orlando, USA" },
+  { name: "R. N. Mukherjee", post: "Hon. Treasurer", institution: "ORSI Council", location: "" },
+  { name: "Sachin Kumar Mangla", post: "", institution: "O P Jindal Global University", location: "Haryana, India" },
+  { name: "Samarjit Kar", post: "", institution: "National Institute of Technology", location: "Durgapur, India" },
+  { name: "Shiv Raj Singh", post: "", institution: "CCS University", location: "Meerut, India" },
+  { name: "Snigdha Banerjee", post: "", institution: "Devi Ahilya University", location: "Indore, India" },
+  { name: "Vijay Kumar Varshney", post: "Head of Technology", institution: "MESA, Smollan", location: "India" },
+  { name: "V. S. S. Yadavalli", post: "", institution: "University of Pretoria", location: "Pretoria, South Africa" }
 ];
 
 export const ORGANIZING_COMMITTEE = [

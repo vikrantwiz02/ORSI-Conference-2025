@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { PATRONS, CHAIRS, ADVISORY_COMMITTEE, ORGANIZING_COMMITTEE, ORSI_COUNCIL_MEMBERS } from '../constants';
+import { PATRONS, CHAIRS, ADVISORY_COMMITTEE, ORGANIZING_COMMITTEE, ORSI_COUNCIL_MEMBERS, SPEAKERS } from '../constants';
 
 const CommitteeSection: React.FC = () => {
   const [showAllAdvisory, setShowAllAdvisory] = useState(false);
@@ -127,8 +127,18 @@ const CommitteeSection: React.FC = () => {
             <h3 className="text-2xl font-bold text-govt-navy mb-8 text-center bg-slate-50 py-4 rounded-xl mx-auto max-w-3xl border border-slate-200">
                 Speakers
             </h3>
-            <div className="text-center mb-16 py-8">
-                <p className="text-2xl md:text-3xl font-serif italic text-slate-500">To be announced soon</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                {SPEAKERS.map((speaker, idx) => (
+                    <div key={idx} className="bg-slate-50 p-6 rounded-2xl text-center border-b-4 border-govt-blue hover:shadow-lg transition-shadow">
+                        {/* <div className="w-16 h-16 bg-govt-blue/10 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl font-serif font-bold text-govt-blue">
+                            {speaker.name.split(' ').find(p => !['Prof.', 'Mr.', 'Ms.', 'Dr.'].includes(p))?.charAt(0) ?? speaker.name.charAt(0)}
+                        </div> */}
+                        <h3 className="text-base font-bold text-govt-navy mb-1">{speaker.name}</h3>
+                        {speaker.post && <p className="text-sm text-slate-600 leading-snug mb-1">{speaker.post}</p>}
+                        <p className="text-sm text-slate-700 font-medium leading-snug mb-1">{speaker.institution}</p>
+                        <p className="text-xs text-govt-accent font-medium">{speaker.location}</p>
+                    </div>
+                ))}
             </div>
         </div>
 
@@ -139,17 +149,14 @@ const CommitteeSection: React.FC = () => {
             </h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {displayedAdvisory.map((member, idx) => {
-                    const parts = member.split(', ');
-                    const name = parts[0];
-                    const affiliation = parts.slice(1).join(', ');
-                    return (
-                        <div key={idx} className="bg-slate-50 p-6 rounded-2xl text-center border-b-4 border-govt-blue hover:shadow-lg transition-shadow">
-                            <h3 className="text-lg font-bold text-govt-navy mb-2">{name}</h3>
-                            <p className="text-sm text-slate-600 leading-snug">{affiliation}</p>
-                        </div>
-                    );
-                })}
+                {displayedAdvisory.map((member, idx) => (
+                    <div key={idx} className="bg-slate-50 p-6 rounded-2xl text-center border-b-4 border-govt-blue hover:shadow-lg transition-shadow">
+                        <h3 className="text-base font-bold text-govt-navy mb-1">{member.name}</h3>
+                        {member.post && <p className="text-sm text-slate-600 leading-snug mb-1">{member.post}</p>}
+                        <p className="text-sm text-slate-700 font-medium leading-snug mb-1">{member.institution}</p>
+                        {member.location && <p className="text-xs text-govt-accent font-medium">{member.location}</p>}
+                    </div>
+                ))}
             </div>
             
             {/* Show More Button */}
