@@ -153,9 +153,9 @@ export const SPEAKERS = [
   },
   {
     name: "Prof. Sachin Kumar Mangla",
-    post: "Research Centre - Digital Circular Economy for Sustainable Development Goals, Jindal Global Business School",
-    institution: "O P Jindal Global University",
-    location: "Sonipat, Haryana, India"
+    post: "Foundation for Organisational Research and Education",
+    institution: "Fore School of Management",
+    location: "New Delhi, India"
   },
   {
     name: "Prof. Aquil Ahmed",
