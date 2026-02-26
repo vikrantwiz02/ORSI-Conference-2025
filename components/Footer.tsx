@@ -102,7 +102,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 </button>
                 <span className="hidden md:inline text-slate-600">•</span>
                 <a 
-                  href="https://vikrant-k.vercel.app/" 
+                  href="https://www.vikrantkumar.site/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="group flex items-center gap-1.5 hover:text-govt-accent transition-colors"
