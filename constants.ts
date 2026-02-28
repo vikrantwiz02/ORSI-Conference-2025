@@ -250,10 +250,10 @@ export const ORSI_COUNCIL_MEMBERS = [
 ];
 
 export const IMPORTANT_DATES = [
-  { label: "Last date for extended abstract submission", date: "25/02/2026", oldDate: "10/02/2026" },
-  { label: "Notification for Acceptance of Abstracts", date: "26/02/2026", oldDate: "12/02/2026" },
-  { label: "Last date for Early Bird Registration", date: "28/02/2026", oldDate: "20/02/2026" },
-  { label: "Last date for full paper submission", date: "28/02/2026" }
+  { label: "Last date for extended abstract submission", date: "03/03/2026", oldDates: ["25/02/2026", "10/02/2026"] },
+  { label: "Notification for Acceptance of Abstracts", date: "04/03/2026", oldDates: ["26/02/2026", "12/02/2026"] },
+  { label: "Last date for Registration", date: "04/03/2026", oldDates: ["28/02/2026", "20/02/2026"] },
+  { label: "Last date for full paper submission", date: "05/03/2026", oldDates: ["28/02/2026"] }
 ];
 
 export const REGISTRATION_FEES = [
@@ -289,7 +289,7 @@ export const FAQS = [
   },
   {
     question: "What is the deadline for abstract submission?",
-    answer: "The last date for extended abstract submission is 22nd February 2026. Acceptance notifications will be sent by 23rd February 2026."
+    answer: "The last date for extended abstract submission is 3rd March 2026. Acceptance notifications will be sent by 4th March 2026."
   },
   {
     question: "Will the conference proceedings be published?",

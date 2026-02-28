@@ -139,12 +139,6 @@ const TermsOfServicePage: React.FC<TermsOfServicePageProps> = ({ onClose, onPriv
                 <li>Payments via NEFT/RTGS to the designated bank account.</li>
                 <li>Proof of payment required for confirmation.</li>
             </ul>
-            <SubHeading>6.2 Refund Policy</SubHeading>
-            <ul className="list-disc pl-5 space-y-1 marker:text-red-500">
-                <li>Early bird fees are non-refundable after the deadline.</li>
-                <li>Full refunds within 30 days if conference is canceled by organizers.</li>
-                <li>No refunds for participant withdrawal.</li>
-            </ul>
         </SectionCard>
 
         {/* Section 7, 8, 9: Policies Group */}

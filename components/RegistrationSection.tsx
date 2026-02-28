@@ -26,11 +26,11 @@ const RegistrationSection: React.FC = () => {
                     <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Step {idx + 1}</div>
                     <div className="text-lg font-mono font-bold text-govt-navy mb-1">
                         {item.date}
-                        {item.oldDate && (
-                            <div className="text-sm text-red-500 line-through font-normal mt-0.5">
-                                {item.oldDate}
+                        {item.oldDates && item.oldDates.map((d: string, i: number) => (
+                            <div key={i} className="text-xs text-red-500 line-through font-normal mt-0.5 opacity-80">
+                                {d}
                             </div>
-                        )}
+                        ))}
                     </div>
                     <div className="text-xs text-slate-600 font-medium leading-tight">{item.label}</div>
                 </div>
@@ -90,6 +90,28 @@ const RegistrationSection: React.FC = () => {
                         </a>
                     </p>
                 </div>
+            </div>
+        </div>
+
+        {/* Official Notice */}
+        <div className="mb-6 rounded-2xl overflow-hidden border border-amber-400 shadow-md">
+            {/* Notice Header */}
+            <div className="bg-amber-500 px-5 py-2.5 flex items-center justify-between gap-3">
+                <div className="flex items-center gap-2.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                    </svg>
+                    <span className="text-white font-black text-sm uppercase tracking-widest">Official Notice</span>
+                </div>
+                <span className="text-amber-100 text-xs font-semibold uppercase tracking-wider">Paper Submission</span>
+            </div>
+            {/* Notice Body */}
+            <div className="bg-amber-50 px-6 py-4 border-l-4 border-amber-500">
+                <p className="text-sm text-amber-900 leading-relaxed">
+                    Due to multiple requests, a{' '}
+                    <strong className="font-bold text-amber-800 underline underline-offset-2 decoration-amber-500">limited number of online presentation slots</strong>{' '}
+                    will be available during the conference. Papers may be submitted before the stated deadlines.
+                </p>
             </div>
         </div>
 

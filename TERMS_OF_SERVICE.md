@@ -1,6 +1,6 @@
 # Terms of Service
 
-**Effective Date:** December 18, 2025  
+**Effective Date:** December 18, 2025
 **Last Updated:** December 18, 2025
 
 ## 1. Acceptance of Terms
@@ -20,6 +20,7 @@ The ICAORFDI-2026 Conference Portal provides information about the International
 ## 3. User Eligibility
 
 The Website is intended for use by:
+
 - Academic researchers and faculty members
 - Students pursuing postgraduate or doctoral studies
 - Industry professionals
@@ -31,11 +32,13 @@ Users must be at least 18 years of age or have parental/guardian consent to use 
 ## 4. Registration and Submissions
 
 ### 4.1 Conference Registration
+
 - All registration fees are non-refundable unless the conference is canceled by the organizers
 - Registration confirmation is subject to successful payment verification
 - The organizers reserve the right to refuse or cancel registration at their discretion
 
 ### 4.2 Abstract and Paper Submissions
+
 - All submitted abstracts and papers must be original work
 - Submissions must not infringe upon any copyright, patent, or other intellectual property rights
 - The organizers reserve the right to reject submissions that do not meet quality standards or conference themes
@@ -44,9 +47,11 @@ Users must be at least 18 years of age or have parental/guardian consent to use 
 ## 5. Intellectual Property Rights
 
 ### 5.1 Website Content
+
 All content on this Website, including but not limited to text, graphics, logos, images, and software, is the property of ORSI Indore Chapter, Government Holkar Science College, or their content suppliers and is protected by Indian and international copyright laws.
 
 ### 5.2 User Submissions
+
 - Authors retain copyright to their submitted abstracts and papers
 - Authors grant the conference organizers a non-exclusive license to publish, reproduce, and distribute their work in conference proceedings and related publications
 - Authors are responsible for obtaining necessary permissions for any third-party content included in their submissions
@@ -54,14 +59,10 @@ All content on this Website, including but not limited to text, graphics, logos,
 ## 6. Payment Terms
 
 ### 6.1 Registration Fees
+
 - All fees are listed in Indian Rupees (INR) or US Dollars (USD) as applicable
 - Payments must be made via NEFT/RTGS to the designated bank account
 - Payment confirmation and registration forms must be submitted to the conference email
-
-### 6.2 Refund Policy
-- Early bird registration fees are non-refundable after the early bird deadline
-- In case of conference cancellation by organizers, full refunds will be processed within 30 business days
-- Refunds due to participant withdrawal are not permitted
 
 ## 7. Accommodation and Travel
 
@@ -72,6 +73,7 @@ All content on this Website, including but not limited to text, graphics, logos,
 ## 8. Code of Conduct
 
 Participants agree to:
+
 - Conduct themselves professionally and respectfully
 - Respect intellectual property rights and academic integrity
 - Not engage in harassment, discrimination, or disruptive behavior
@@ -82,6 +84,7 @@ Violation of the code of conduct may result in removal from the conference witho
 ## 9. Limitation of Liability
 
 To the maximum extent permitted by law:
+
 - The organizers are not liable for any indirect, incidental, special, or consequential damages
 - The organizers are not responsible for technical issues, website downtime, or data loss
 - The total liability of the organizers shall not exceed the registration fee paid by the participant
@@ -101,6 +104,7 @@ The organizers reserve the right to modify these Terms of Service at any time. C
 ## 13. Conference Changes or Cancellation
 
 The organizers reserve the right to:
+
 - Modify conference dates, venues, or programs
 - Cancel the conference due to force majeure, insufficient registrations, or other unforeseen circumstances
 - Substitute speakers or change the conference schedule
@@ -115,9 +119,9 @@ These Terms of Service shall be governed by and construed in accordance with the
 
 For questions or concerns regarding these Terms of Service, please contact:
 
-**ICAORFDI-2026 Conference Committee**  
-Government Holkar Science College, Indore  
-Email: icaorfdi2026@gmail.com  
+**ICAORFDI-2026 Conference Committee**
+Government Holkar Science College, Indore
+Email: icaorfdi2026@gmail.com
 Website: [https://orsiconference.org/](https://orsiconference.org/)
 
 ## 16. Severability

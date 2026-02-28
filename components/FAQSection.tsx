@@ -50,7 +50,7 @@ const FAQSection: React.FC = () => {
                 <div className="p-5 pt-2 text-slate-600 border-t border-slate-100 leading-relaxed bg-white">
                   {index === 2 ? (
                     <div>
-                      The last date for extended abstract submission is <span className="font-semibold text-govt-navy">22nd February 2026</span> <span className="text-red-500 line-through text-sm">(10th February 2026)</span>. Acceptance notifications will be sent by <span className="font-semibold text-govt-navy">23rd February 2026</span> <span className="text-red-500 line-through text-sm">(12th February 2026)</span>.
+                      The last date for extended abstract submission is <span className="font-semibold text-govt-navy">3rd March 2026</span> <span className="text-red-500 line-through text-sm">(25th February 2026)</span>. Acceptance notifications will be sent by <span className="font-semibold text-govt-navy">4th March 2026</span> <span className="text-red-500 line-through text-sm">(26th February 2026)</span>.
                     </div>
                   ) : (
                     faq.answer
