@@ -54,13 +54,6 @@ const InfoSection: React.FC<InfoSectionProps> = ({ id, title, content, imageSrc,
                 <div className="prose prose-lg text-slate-600 text-justify leading-relaxed">
                     <p>{content}</p>
                 </div>
-
-                <button className={`mt-8 flex items-center gap-2 text-sm font-bold border-b-2 pb-1 transition-all ${isBlue ? 'text-govt-blue border-govt-blue hover:text-blue-700' : 'text-govt-accent border-govt-accent hover:text-orange-700'}`}>
-                    Read More 
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                </button>
             </div>
             </div>
         </div>
