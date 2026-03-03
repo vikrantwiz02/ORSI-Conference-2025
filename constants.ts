@@ -148,7 +148,7 @@ export const SPEAKERS = [
   {
     name: "Prof. Nita H Shah",
     post: "Department of Mathematics",
-    institution: "Gujarat University",
+    institution: "School of Emerging Science and Technology",
     location: "Ahmedabad, Gujarat, India"
   },
   {
@@ -202,6 +202,7 @@ export const ADVISORY_COMMITTEE = [
   { name: "Hui Ming Wee", post: "", institution: "Chung Yuan Christian University", location: "Chungli, Taiwan" },
   { name: "I. V. Murlikrishna", post: "", institution: "Jawaharlal Nehru Tech University", location: "Hyderabad, India" },
   { name: "J P Singh Joorel", post: "", institution: "University of Jammu", location: "India" },
+  { name: "K. K. Aggarwal", post: "", institution: "University of Delhi", location: "Delhi, India" },
   { name: "Kalyan Chakraborty", post: "", institution: "SRM University", location: "Andhra Pradesh, India" },
   { name: "Konstantina Skouri", post: "", institution: "University of Ioannina", location: "Ioannina, Greece" },
   { name: "Manoj Kapoor", post: "CEO and President", institution: "enGen Global", location: "Hyderabad, India" },
