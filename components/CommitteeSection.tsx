@@ -1,10 +1,45 @@
 import React, { useState } from 'react';
 import { PATRONS, CHAIRS, ADVISORY_COMMITTEE, ORGANIZING_COMMITTEE, ORSI_COUNCIL_MEMBERS, SPEAKERS } from '../constants';
 
+const INITIAL_VISIBLE = 6;
+
+interface ViewAllButtonProps {
+  total: number;
+  showAll: boolean;
+  onToggle: () => void;
+}
+
+const ViewAllButton: React.FC<ViewAllButtonProps> = ({ total, showAll, onToggle }) => {
+  if (total <= INITIAL_VISIBLE) return null;
+  return (
+    <div className="text-center mt-8">
+      <button
+        onClick={onToggle}
+        className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-white border border-slate-300 text-govt-navy font-semibold hover:bg-slate-50 hover:border-govt-blue transition-all shadow-sm"
+      >
+        {showAll ? 'Show Less' : `View All ${total} Members`}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className={`h-4 w-4 transition-transform duration-300 ${showAll ? 'rotate-180' : ''}`}
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+    </div>
+  );
+};
+
 const CommitteeSection: React.FC = () => {
+  const [showAllSpeakers, setShowAllSpeakers] = useState(false);
   const [showAllAdvisory, setShowAllAdvisory] = useState(false);
-  
-  const displayedAdvisory = showAllAdvisory ? ADVISORY_COMMITTEE : ADVISORY_COMMITTEE.slice(0, 9);
+  const [showAllOrsi, setShowAllOrsi] = useState(false);
+
+  const displayedSpeakers = showAllSpeakers ? SPEAKERS : SPEAKERS.slice(0, INITIAL_VISIBLE);
+  const displayedAdvisory = showAllAdvisory ? ADVISORY_COMMITTEE : ADVISORY_COMMITTEE.slice(0, INITIAL_VISIBLE);
+  const displayedOrsi = showAllOrsi ? ORSI_COUNCIL_MEMBERS : ORSI_COUNCIL_MEMBERS.slice(0, INITIAL_VISIBLE);
 
   // Helper function to get photo filename from name
   const getPhotoUrl = (name: string) => {
@@ -127,8 +162,8 @@ const CommitteeSection: React.FC = () => {
             <h3 className="text-2xl font-bold text-govt-navy mb-8 text-center bg-slate-50 py-4 rounded-xl mx-auto max-w-3xl border border-slate-200">
                 Speakers
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-                {SPEAKERS.map((speaker, idx) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-4">
+                {displayedSpeakers.map((speaker, idx) => (
                     <div key={idx} className="bg-slate-50 p-6 rounded-2xl text-center border-b-4 border-govt-blue hover:shadow-lg transition-shadow">
                         {/* <div className="w-16 h-16 bg-govt-blue/10 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl font-serif font-bold text-govt-blue">
                             {speaker.name.split(' ').find(p => !['Prof.', 'Mr.', 'Ms.', 'Dr.'].includes(p))?.charAt(0) ?? speaker.name.charAt(0)}
@@ -140,6 +175,8 @@ const CommitteeSection: React.FC = () => {
                     </div>
                 ))}
             </div>
+            <ViewAllButton total={SPEAKERS.length} showAll={showAllSpeakers} onToggle={() => setShowAllSpeakers(v => !v)} />
+            <div className="mb-16" />
         </div>
 
         {/* Advisory Committee - Expandable List */}
@@ -158,27 +195,8 @@ const CommitteeSection: React.FC = () => {
                     </div>
                 ))}
             </div>
-            
-            {/* Show More Button */}
-            {ADVISORY_COMMITTEE.length > 9 && (
-                <div className="text-center mt-8">
-                    <button 
-                        onClick={() => setShowAllAdvisory(!showAllAdvisory)}
-                        className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-white border border-slate-300 text-govt-navy font-semibold hover:bg-slate-50 hover:border-govt-blue transition-all shadow-sm"
-                    >
-                        {showAllAdvisory ? 'Show Less' : `View All ${ADVISORY_COMMITTEE.length} Members`}
-                        <svg 
-                            xmlns="http://www.w3.org/2000/svg" 
-                            className={`h-4 w-4 transition-transform duration-300 ${showAllAdvisory ? 'rotate-180' : ''}`} 
-                            fill="none" 
-                            viewBox="0 0 24 24" 
-                            stroke="currentColor"
-                        >
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                </div>
-            )}
+
+            <ViewAllButton total={ADVISORY_COMMITTEE.length} showAll={showAllAdvisory} onToggle={() => setShowAllAdvisory(v => !v)} />
         </div>
 
         {/* ORSI Council Members */}
@@ -188,7 +206,7 @@ const CommitteeSection: React.FC = () => {
             </h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {ORSI_COUNCIL_MEMBERS.map((member, idx) => (
+                {displayedOrsi.map((member, idx) => (
                     member ? (
                         <div key={idx} className="bg-slate-50 p-6 rounded-2xl text-center border-b-4 border-govt-accent hover:shadow-lg transition-shadow">
                             <h3 className="text-lg font-bold text-govt-navy mb-2">{member}</h3>
@@ -198,6 +216,8 @@ const CommitteeSection: React.FC = () => {
                     )
                 ))}
             </div>
+
+            <ViewAllButton total={ORSI_COUNCIL_MEMBERS.filter(Boolean).length} showAll={showAllOrsi} onToggle={() => setShowAllOrsi(v => !v)} />
         </div>
       </div>
     </section>
