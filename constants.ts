@@ -102,12 +102,12 @@ export const CHAIRS = [
 
 export const SPEAKERS = [
   // International Speakers
-  {
-    name: "Prof. Hui Ming Wee",
-    post: "Department of Industrial & Systems Engineering",
-    institution: "Chung Yuan Christian University Taiwan",
-    location: "Chungli, 32023, Taiwan"
-  },
+  // {
+  //   name: "Prof. Hui Ming Wee",
+  //   post: "Department of Industrial & Systems Engineering",
+  //   institution: "Chung Yuan Christian University Taiwan",
+  //   location: "Chungli, 32023, Taiwan"
+  // },
   {
     name: "Prof. Mark Goh",
     post: "NUS Business School and The Logistics Institute-Asia Pacific",
@@ -126,6 +126,12 @@ export const SPEAKERS = [
     institution: "Victoria University",
     location: "Melbourne, Australia"
   },
+  {
+    name: "Prof. Santosh Kumar",
+    post: "Honorary Professor, Mathematics Discipline",
+    institution: "RMIT University",
+    location: "Melbourne, Australia"
+  },
   // Indian Speakers
   {
     name: "Mr. Vijay Kumar Varshney",
@@ -139,12 +145,12 @@ export const SPEAKERS = [
     institution: "Indian Institute of Management Indore",
     location: "Indore, Madhya Pradesh, India"
   },
-  {
-    name: "Prof. Adrijit Goswami",
-    post: "Department of Mathematics",
-    institution: "Indian Institute of Technology Kharagpur",
-    location: "Kharagpur, India"
-  },
+  // {
+  //   name: "Prof. Adrijit Goswami",
+  //   post: "Department of Mathematics",
+  //   institution: "Indian Institute of Technology Kharagpur",
+  //   location: "Kharagpur, India"
+  // },
   {
     name: "Prof. Nita H Shah",
     post: "Department of Mathematics",
@@ -157,29 +163,77 @@ export const SPEAKERS = [
     institution: "Fore School of Management",
     location: "New Delhi, India"
   },
-  {
-    name: "Prof. Aquil Ahmed",
-    post: "Department of Statistics & Operations Research",
-    institution: "Aligarh Muslim University",
-    location: "Aligarh, India"
-  },
+  // {
+  //   name: "Prof. Aquil Ahmed",
+  //   post: "Department of Statistics & Operations Research",
+  //   institution: "Aligarh Muslim University",
+  //   location: "Aligarh, India"
+  // },
   {
     name: "Mr. Manoj Kapoor",
     post: "CEO and President",
     institution: "enGen Global",
     location: "Hyderabad, India"
   },
-  {
-    name: "Prof. Chandra Shekhar",
-    post: "Department of Mathematics",
-    institution: "BITS Pilani, Pilani Campus",
-    location: "India"
+    {
+    name: "Mr. Gurprit S Gulati",
+    post: "CEO and President",
+    institution: "enGen Global",
+    location: "Hyderabad, India"
   },
+    {
+    name: "Prof. Avanish Kumar",
+    post: "Department of Mathematical Sciences and Computer Applications",
+    institution: "Bundelkhand University",
+    location: "Jhansi, Uttar Pradesh, India"
+  },
+  // {
+  //   name: "Prof. Chandra Shekhar",
+  //   post: "Department of Mathematics",
+  //   institution: "BITS Pilani, Pilani Campus",
+  //   location: "Rajasthan, India"
+  // },
   {
     name: "Prof. Samarjit Kar",
     post: "",
     institution: "National Institute of Technology",
     location: "Durgapur, India"
+  },
+  {
+    name: "Dr. Mona Verma",
+    post: "Associate Professor",
+    institution: "Shaheed Sukhdev College of Business Studies, University of Delhi",
+    location: "New Delhi, India"
+  },
+  {
+    name: "Prof. Monalisha Patnaik",
+    post: "Professor &amp; Head",
+    institution: "Sambalpur University",
+    location: "Sambalpur, Odisha, India"
+  },
+  {
+    name: "Prof. Anjana Gupta",
+    post: "Department of Applied Mathematics",
+    institution: "Delhi Technological University",
+    location: "Delhi, India"
+  },
+  {
+    name: "Prof. Snigdha Banerjee",
+    post: "School of Statistics",
+    institution: "Devi Ahila University",
+    location: "Indore, Madhya Pradesh, India"
+  },
+  {
+    name: "Prof. Dr. Sunil Luthara",
+    post: "Director",
+    institution: "All India Council for Technical Education (AICTE)",
+    location: " Nelson Mandela Marg, Vasant Kunj, New Delhi, India",
+  },
+  {
+    name: "Mr. Anant Misra",
+    post: "Senior Publisher",
+    institution: "Springer",
+    location: "New Delhi, India",
   },
 ];
 
