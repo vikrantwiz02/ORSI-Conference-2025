@@ -235,6 +235,12 @@ export const SPEAKERS = [
     institution: "Springer",
     location: "New Delhi, India",
   },
+  {
+    name: "Prof. I. V. Murali Krishna",
+    post: "",
+    institution: "",
+    location: "",
+  },
 ];
 
 export const ADVISORY_COMMITTEE = [
