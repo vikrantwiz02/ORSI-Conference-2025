@@ -176,7 +176,7 @@ export const SPEAKERS = [
     location: "Hyderabad, India"
   },
     {
-    name: "Mr. Gurprit S Gulati",
+    name: "Mr. Gurprit Singh Gulati",
     post: "CEO and President",
     institution: "enGen Global",
     location: "Hyderabad, India"
@@ -207,7 +207,7 @@ export const SPEAKERS = [
   },
   {
     name: "Prof. Monalisha Patnaik",
-    post: "Professor &amp; Head",
+    post: "Professor & Head",
     institution: "Sambalpur University",
     location: "Sambalpur, Odisha, India"
   },
