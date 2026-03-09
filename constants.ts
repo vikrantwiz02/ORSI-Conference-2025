@@ -109,6 +109,60 @@ export const SPEAKERS = [
   //   location: "Chungli, 32023, Taiwan"
   // },
   {
+    name: "Prof. R. N. Mohapatra",
+    post: "Mathematics Department",
+    institution: "University of Central Florida",
+    location: "Florida, USA"
+  },
+  {
+    name: "Prof. Santosh Kumar",
+    post: "Honorary Professor, Mathematics Discipline",
+    institution: "RMIT University",
+    location: "Melbourne, Australia"
+  },
+    {
+    name: "Prof. Sunil Luthara",
+    post: "Director",
+    institution: "All India Council for Technical Education (AICTE)",
+    location: " Nelson Mandela Marg, Vasant Kunj, New Delhi, India",
+  },
+  {
+    "name": "Prof. Muralikrishna Venkata Iyyanki",
+    "post": "Academic Director & Chief Mentor (Berkeley India Academic Programs)",
+    "institution": "Smart Village Movement (SVM) in collaboration with UC Berkeley Haas",
+    "location": "Hyderabad, Telangana, India"
+  },
+    {
+    name: "Prof. Samarjit Kar",
+    post: "",
+    institution: "National Institute of Technology",
+    location: "Durgapur, India"
+  },
+    {
+    name: "Mr. Manoj Kapoor",
+    post: "CEO and President",
+    institution: "enGen Global",
+    location: "Hyderabad, India"
+  },
+      {
+    name: "Mr. Gurprit Singh Gulati",
+    post: "CEO and President",
+    institution: "enGen Global",
+    location: "Hyderabad, India"
+  },
+    {
+    name: "Prof. Bhavin J Shah",
+    post: "Department of Operations Management and Quantitative Techniques",
+    institution: "Indian Institute of Management Indore",
+    location: "Indore, Madhya Pradesh, India"
+  },
+    {
+    name: "Mr. Vijay Kumar Varshney",
+    post: "Co-founder & CTO",
+    institution: "NextG Apex India Private Limited",
+    location: "India"
+  },
+  {
     name: "Prof. Mark Goh",
     post: "NUS Business School and The Logistics Institute-Asia Pacific",
     institution: "National University of Singapore",
@@ -126,25 +180,7 @@ export const SPEAKERS = [
     institution: "Victoria University",
     location: "Melbourne, Australia"
   },
-  {
-    name: "Prof. Santosh Kumar",
-    post: "Honorary Professor, Mathematics Discipline",
-    institution: "RMIT University",
-    location: "Melbourne, Australia"
-  },
   // Indian Speakers
-  {
-    name: "Mr. Vijay Kumar Varshney",
-    post: "Co-founder & CTO",
-    institution: "NextG Apex India Private Limited",
-    location: "India"
-  },
-  {
-    name: "Prof. Bhavin J Shah",
-    post: "Department of Operations Management and Quantitative Techniques",
-    institution: "Indian Institute of Management Indore",
-    location: "Indore, Madhya Pradesh, India"
-  },
   // {
   //   name: "Prof. Adrijit Goswami",
   //   post: "Department of Mathematics",
@@ -169,18 +205,6 @@ export const SPEAKERS = [
   //   institution: "Aligarh Muslim University",
   //   location: "Aligarh, India"
   // },
-  {
-    name: "Mr. Manoj Kapoor",
-    post: "CEO and President",
-    institution: "enGen Global",
-    location: "Hyderabad, India"
-  },
-    {
-    name: "Mr. Gurprit Singh Gulati",
-    post: "CEO and President",
-    institution: "enGen Global",
-    location: "Hyderabad, India"
-  },
     {
     name: "Prof. Avanish Kumar",
     post: "Department of Mathematical Sciences and Computer Applications",
@@ -193,12 +217,6 @@ export const SPEAKERS = [
   //   institution: "BITS Pilani, Pilani Campus",
   //   location: "Rajasthan, India"
   // },
-  {
-    name: "Prof. Samarjit Kar",
-    post: "",
-    institution: "National Institute of Technology",
-    location: "Durgapur, India"
-  },
   {
     name: "Dr. Mona Verma",
     post: "Associate Professor",
@@ -224,22 +242,10 @@ export const SPEAKERS = [
     location: "Indore, Madhya Pradesh, India"
   },
   {
-    name: "Prof. Dr. Sunil Luthara",
-    post: "Director",
-    institution: "All India Council for Technical Education (AICTE)",
-    location: " Nelson Mandela Marg, Vasant Kunj, New Delhi, India",
-  },
-  {
     name: "Mr. Anant Misra",
     post: "Senior Publisher",
     institution: "Springer",
     location: "New Delhi, India",
-  },
-  {
-    name: "Prof. I. V. Murali Krishna",
-    post: "",
-    institution: "",
-    location: "",
   },
 ];
 

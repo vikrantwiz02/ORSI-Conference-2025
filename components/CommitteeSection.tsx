@@ -41,13 +41,38 @@ const CommitteeSection: React.FC = () => {
   const displayedAdvisory = showAllAdvisory ? ADVISORY_COMMITTEE : ADVISORY_COMMITTEE.slice(0, INITIAL_VISIBLE);
   const displayedOrsi = showAllOrsi ? ORSI_COUNCIL_MEMBERS : ORSI_COUNCIL_MEMBERS.slice(0, INITIAL_VISIBLE);
 
-  // Helper function to get photo filename from name
-  const getPhotoUrl = (name: string) => {
-    const titles = ['dr.', 'prof.', 'mr.', 'ms.', 'mrs.'];
-    const parts = name.toLowerCase().split(' ');
-    const firstName = titles.includes(parts[0]) ? parts[1] : parts[0];
-    return `/${firstName}.jpg`;
-  };
+    // Helper function to get photo filename from name, checking for .jpg, .jpeg, .png
+    const getPhotoUrl = (name: string) => {
+        const titles = ['dr.', 'prof.', 'mr.', 'ms.', 'mrs.'];
+        // Special case for R. N. Mohapatra
+        if (name.toLowerCase().includes('mohapatra')) {
+            const exts = ['jpg', 'jpeg', 'png'];
+            for (const ext of exts) {
+                const img = `/mohapatra.${ext}`;
+                if (window.__PUBLIC_IMAGES__ && window.__PUBLIC_IMAGES__.includes(img)) {
+                    return img;
+                }
+            }
+            return '/mohapatra.jpeg';
+        }
+        const parts = name.toLowerCase().split(' ');
+        const firstName = titles.includes(parts[0]) ? parts[1] : parts[0];
+        const exts = ['jpg', 'jpeg', 'png'];
+        for (const ext of exts) {
+            const img = `/${firstName}.${ext}`;
+            if (window.__PUBLIC_IMAGES__ && window.__PUBLIC_IMAGES__.includes(img)) {
+                return img;
+            }
+        }
+        return `/${firstName}.jpg`;
+    };
+
+    // Populate global image list from public folder (only runs in browser)
+    if (typeof window !== 'undefined' && !window.__PUBLIC_IMAGES__) {
+        window.__PUBLIC_IMAGES__ = [
+            '/anamika.jpg', '/anil.jpg', '/bhavin.jpeg', '/chandra.jpg', '/chitaranjan.jpg', '/college_image.jpg', '/college_image1.jpg', '/deepmala.jpg', '/gurprit.jpeg', '/hemraj.jpg', '/logo.jpg', '/manoj.jpg', '/muralikrishna.jpeg', '/nagesh.jpg', '/naresh.jpg', '/pradeep.jpg', '/r.jpeg', '/samarjit.jpg', '/santosh.jpeg', '/sunil.jpeg', '/vandana.jpg', '/vijay.jpeg'
+        ];
+    }
 
   // Check if image exists and show it, otherwise show initial
   const [imageErrors, setImageErrors] = React.useState<Record<string, boolean>>({});
@@ -165,9 +190,20 @@ const CommitteeSection: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-4">
                 {displayedSpeakers.map((speaker, idx) => (
                     <div key={idx} className="bg-slate-50 p-6 rounded-2xl text-center border-b-4 border-govt-blue hover:shadow-lg transition-shadow">
-                        {/* <div className="w-16 h-16 bg-govt-blue/10 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl font-serif font-bold text-govt-blue">
-                            {speaker.name.split(' ').find(p => !['Prof.', 'Mr.', 'Ms.', 'Dr.'].includes(p))?.charAt(0) ?? speaker.name.charAt(0)}
-                        </div> */}
+                        <div className="w-24 h-24 bg-white shadow-sm rounded-full mx-auto mb-4 flex items-center justify-center text-3xl font-serif font-bold text-govt-blue border border-slate-100 overflow-hidden">
+                            {!imageErrors[speaker.name] ? (
+                                <img 
+                                    src={getPhotoUrl(speaker.name)} 
+                                    alt={speaker.name}
+                                    loading="lazy"
+                                    decoding="async"
+                                    className="w-full h-full object-cover"
+                                    onError={() => handleImageError(speaker.name)}
+                                />
+                            ) : (
+                                speaker.name.charAt(0)
+                            )}
+                        </div>
                         <h3 className="text-base font-bold text-govt-navy mb-1">{speaker.name}</h3>
                         {speaker.post && <p className="text-sm text-slate-600 leading-snug mb-1">{speaker.post}</p>}
                         <p className="text-sm text-slate-700 font-medium leading-snug mb-1">{speaker.institution}</p>
