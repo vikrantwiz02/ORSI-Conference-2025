@@ -25,7 +25,14 @@ const PARTNERS = [
     role: "Indexing Partner",
     type: "Database",
     logo: "/Scopus_logo.png"
-  }
+  },
+  {
+    name: "CSIR",
+    role: "Partner",
+    type: "Research Organization",
+    logo: "/csir.png"
+  },
+
 ];
 
 const SponsorsSection: React.FC = () => {
@@ -39,7 +46,7 @@ const SponsorsSection: React.FC = () => {
           <div className="w-12 h-1 bg-slate-100 mx-auto rounded-full"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {PARTNERS.map((partner, index) => (
             <div 
               key={index} 
