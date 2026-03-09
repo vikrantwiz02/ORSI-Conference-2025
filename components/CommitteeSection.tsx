@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import { PATRONS, CHAIRS, ADVISORY_COMMITTEE, ORGANIZING_COMMITTEE, ORSI_COUNCIL_MEMBERS, SPEAKERS } from '../constants';
 
+declare global {
+  interface Window {
+    __PUBLIC_IMAGES__?: string[];
+  }
+}
+
 const INITIAL_VISIBLE = 6;
 
 interface ViewAllButtonProps {
