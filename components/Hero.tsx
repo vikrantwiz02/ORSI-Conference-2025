@@ -1,51 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { CONFERENCE_DETAILS } from '../constants';
 import { CalendarIcon, MapPinIcon } from './Icons';
 
 const Hero: React.FC = () => {
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0
-  });
-
-  useEffect(() => {
-    const targetDate = new Date('2026-03-06T09:00:00').getTime();
-
-    const calculateTimeLeft = () => {
-      const now = new Date().getTime();
-      const difference = targetDate - now;
-
-      if (difference > 0) {
-        setTimeLeft({
-          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-          minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
-          seconds: Math.floor((difference % (1000 * 60)) / 1000)
-        });
-      }
-    };
-
-    calculateTimeLeft(); // Initial calculation
-    const interval = setInterval(calculateTimeLeft, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const isUrgent = timeLeft.days === 0 && (timeLeft.hours > 0 || timeLeft.minutes > 0 || timeLeft.seconds > 0);
-
-  const TimeBlock = ({ value, label }: { value: number, label: string }) => (
-    <div className={`flex flex-col items-center bg-white border ${isUrgent ? 'border-red-400 shadow-[0_0_15px_rgba(239,68,68,0.3)]' : 'border-slate-200'} p-2 rounded-lg shadow-sm min-w-[64px] sm:min-w-[72px] transition-all duration-300`}>
-      <span className={`text-xl sm:text-2xl font-bold ${isUrgent ? 'text-red-600 animate-pulse' : 'text-govt-blue'} font-mono leading-none`}>
-        {value.toString().padStart(2, '0')}
-      </span>
-      <span className="text-xs sm:text-[10px] font-semibold text-slate-400 uppercase tracking-wider mt-1">
-        {label}
-      </span>
-    </div>
-  );
-
   return (
     <section id="home" className="relative bg-surface overflow-hidden min-h-screen flex items-center py-20 lg:py-0">
         {/* Modern Background Decorations */}
@@ -85,15 +42,12 @@ const Hero: React.FC = () => {
                          {CONFERENCE_DETAILS.subEvent}
                     </p>
 
-                    {/* Countdown Timer */}
-                    <div className="mb-8 flex flex-wrap justify-center lg:justify-start gap-3">
-                        <div className={`flex items-center gap-2 text-xs font-bold ${isUrgent ? 'text-red-600' : 'text-govt-navy'} uppercase tracking-widest mr-2 lg:hidden w-full justify-center`}>
-                           <span>Event Starts In</span>
-                        </div>
-                        <TimeBlock value={timeLeft.days} label="Days" />
-                        <TimeBlock value={timeLeft.hours} label="Hours" />
-                        <TimeBlock value={timeLeft.minutes} label="Mins" />
-                        <TimeBlock value={timeLeft.seconds} label="Secs" />
+                    <div className="mb-8 flex justify-center lg:justify-start">
+                      <div className="bg-white border border-slate-200 rounded-xl px-6 py-4 shadow-sm max-w-md text-left">
+                        <p className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-1">Conference Status</p>
+                        <p className="text-lg sm:text-xl font-extrabold text-govt-navy leading-tight">ICAORFDI-2026 has concluded.</p>
+                        <p className="text-sm text-slate-600 mt-1">Thank you to all participants, speakers, and organizers.</p>
+                      </div>
                     </div>
 
                     <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8">
